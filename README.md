@@ -1,2 +1,2 @@
 # slice-nyc
-A Rails app that helps organize Pizza places in NYC
+A ruby on rails app that helps organize and rate your favorite Pizza places in the NYC area.
