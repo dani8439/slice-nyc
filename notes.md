@@ -23,6 +23,11 @@ Models:
     - restaurant_id ?
 
   Rating belongs_to :restaurant
+    - menu goes here??
     - taste
     - additional notes/comments on the food/atmosphere
     - restaurant_id ?
+
+  Menu a category of it's own?
+    - full menu
+    - only pizza 
