@@ -1,0 +1,2 @@
+class PiesController < ApplicationController
+end

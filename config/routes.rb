@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :menus
+  resources :pies
   resources :categories
   resources :ratings
   resources :restaurants
