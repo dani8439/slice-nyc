@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_04_02_190602) do
     t.string "crust"
     t.string "cheese"
     t.string "toppings"
+    t.string "specialty_pies"
     t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

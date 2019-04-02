@@ -26,19 +26,20 @@ Models:
     - Detroit Pizza
     - St. Louis
     - Crust - thin or thick, also aged? (Is this own subcategory?)
+    - Cheese - Fresh, commercial, and homemade (should this be it's own subcategory?)
+    - toppings - pepperoni, olives, onions, peppers, sausage, etc, etc (should this be it's own subcategory?)
+    - specialty pies 
 
 
   Category belongs_to :restaurant
     <!-- - brick fire -->
-    - coal fired oven
-    - wood fired fire
-    - commercial - Gas
+    - type: coal fired oven, wood fired fire, commercial - Gas
     - restaurant_id ?
 
   Rating belongs_to :restaurant
     <!-- - menu goes here?? -->
     - taste
-    - service score 
+    - service score
     - additional notes/comments on the food/atmosphere
     - restaurant_id ?
 

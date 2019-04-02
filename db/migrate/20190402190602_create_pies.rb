@@ -5,6 +5,7 @@ class CreatePies < ActiveRecord::Migration[5.2]
       t.string :crust
       t.string :cheese
       t.string :toppings
+      t.string :specialty_pies
       t.integer :restaurant_id
 
       t.timestamps
