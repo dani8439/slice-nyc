@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_04_02_154553) do
   end
 
   create_table "menus", force: :cascade do |t|
-    t.string "type"
+    t.string "kind"
     t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,12 +37,12 @@ ActiveRecord::Schema.define(version: 2019_04_02_154553) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.string "address"
-    t.string "type"
+    t.string "neighborhood"
+    t.string "kind"
     t.integer "menu_id"
     t.integer "rating_id"
     t.integer "user_id"
-    t.boolean "multiple_locations"
+    t.boolean "multiple_locations", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

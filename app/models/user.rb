@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_many :restaurants
+  has_many :categories, through: :restaurants
+  has_many :ratings, through: :restaurants
+  has_many :menus, through: :restaurants
   has_secure_password
 
   validates :password, presence: true
