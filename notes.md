@@ -10,7 +10,7 @@ Models:
     - neighborhood -- ? Category of it's own?
     - multiple locations ?
     - type : sit down, take out, standing room only -- Or kind??
-    - menu : options aside from just pizza
+    - menu : full menu or just pizza?
     - cost : $$$$$
     - rating_id
     - user_id
@@ -25,7 +25,8 @@ Models:
     - California/Gourmet Pizza
     - Detroit Pizza
     - St. Louis
-    - or crust is own attribute - thin or thick crust pizza own sub category??
+    - Crust - thin or thick, also aged? (Is this own subcategory?)
+
 
   Category belongs_to :restaurant
     <!-- - brick fire -->
@@ -35,8 +36,9 @@ Models:
     - restaurant_id ?
 
   Rating belongs_to :restaurant
-    - menu goes here??
+    <!-- - menu goes here?? -->
     - taste
+    - service score 
     - additional notes/comments on the food/atmosphere
     - restaurant_id ?
 

@@ -22,15 +22,19 @@ ActiveRecord::Schema.define(version: 2019_04_02_190602) do
   create_table "pies", force: :cascade do |t|
     t.string "name"
     t.string "crust"
+    t.string "cheese"
+    t.string "toppings"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "ratings", force: :cascade do |t|
     t.integer "taste_score"
+    t.integer "service_score"
+    t.integer "price"
+    t.string "comments"
     t.integer "restaurant_id"
-    t.string "atmosphere"
-    t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +46,7 @@ ActiveRecord::Schema.define(version: 2019_04_02_190602) do
     t.integer "menu_id"
     t.integer "rating_id"
     t.integer "user_id"
+    t.integer "pie_id"
     t.boolean "multiple_locations", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
