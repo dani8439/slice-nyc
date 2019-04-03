@@ -21,11 +21,11 @@ Validations in model of presence of attributes -- ie, cannot catalogue a pizza w
 
 Scope method ??
 
-Implement an authentication system? 
+Implement an authentication system?
 
 Omniauth for third party (facebook) login.
 
-Nested routes: Restaurant within user? Pie within restaurant?
+Nested routes: Restaurant within user? Pie within restaurant (for new, index)
 
 Models:
 

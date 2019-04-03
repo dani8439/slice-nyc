@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2019_04_02_190602) do
     t.string "name"
     t.string "neighborhood"
     t.string "kind"
-    t.integer "menu_id"
     t.integer "rating_id"
     t.integer "user_id"
     t.integer "pie_id"
