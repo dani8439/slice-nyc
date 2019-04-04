@@ -57,7 +57,7 @@ Models:
     - Crust - thin or thick, also aged? (Is this own subcategory?)
     - Cheese - Fresh, commercial, and homemade (should this be it's own subcategory?)
     - toppings - pepperoni, olives, onions, peppers, sausage, etc, etc (should this be it's own subcategory?)
-    - specialty pies
+    <!-- - specialty pies -->
 
 
   Category belongs_to :restaurant

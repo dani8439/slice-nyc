@@ -1,5 +1,6 @@
 class Pie < ApplicationRecord
   belongs_to :restaurant
+  has_many :toppings
 
   validates :name, presence: true
   validates :cheese, presence: true

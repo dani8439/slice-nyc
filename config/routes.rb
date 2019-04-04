@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :toppings
   resources :pies
   resources :categories
   resources :ratings
