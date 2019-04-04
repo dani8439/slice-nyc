@@ -1,0 +1,7 @@
+input {
+  display: block
+}
+
+.field_with_errors input {
+  border-color: red;
+}
