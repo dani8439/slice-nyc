@@ -5,6 +5,7 @@ class SessionController < ApplicationController
 
   def create
     if auth_hash = request.env["omniauth.auth"]
+      # render :text => auth_hash.inspect -- see notes in Users Model
       user = User.find_or_create_by_omniauth(auth_hash)
       session[:user_id] = user.id
 
@@ -19,7 +20,7 @@ class SessionController < ApplicationController
       else
         render :new
       end
-    end 
+    end
   end
 
   private
