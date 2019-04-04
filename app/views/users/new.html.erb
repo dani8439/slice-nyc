@@ -7,7 +7,7 @@
     <ul>
       <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %.
+      <% end %>
     </ul>
   </div>
 <% end %>
@@ -24,9 +24,10 @@
   </div>
 
   <div>
-    <%= f.submit %>
+    <%= f.submit "Sign Up"%><br>
   </div>
-
-
-
 <% end %>
+
+  <div id="facebook_login">
+    <%= link_to ('Facebook_Login'), '/auth/facebook' %>
+  </div>
