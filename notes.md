@@ -34,7 +34,7 @@ Models:
     - password_digest
     - UID
 
-  Restaurant - NOT JOIN TABLE. Need to amend after meeting with Kevin, notes in notebook. 
+  Restaurant - NOT JOIN TABLE. Need to amend after meeting with Kevin, notes in notebook.
     JOIN TABLE belongs_to :user, has_many :categories, has_many :pies, has_many :ratings
     - name
     - neighborhood -- ? Category of it's own?
@@ -43,7 +43,7 @@ Models:
     - menu : full menu or just pizza?
     - cost : $$$$$
     - rating_id
-    - user_id
+
 
   Pies belong_to :restaurant
     - grandma/grandpa pie

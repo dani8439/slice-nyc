@@ -1,0 +1,2 @@
+class PieRating < ApplicationRecord
+end

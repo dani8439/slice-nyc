@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :pie_ratings
   resources :toppings
   resources :pies
   resources :categories
-  resources :ratings
   resources :restaurants
   resources :users, only: [:create, :show]
 

@@ -4,7 +4,6 @@ class CreatePies < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :crust
       t.string :cheese
-      t.integer :restaurant_id
 
       t.timestamps
     end

@@ -1,0 +1,2 @@
+module PieRatingsHelper
+end

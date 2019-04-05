@@ -1,0 +1,2 @@
+class PieRatingsController < ApplicationController
+end
