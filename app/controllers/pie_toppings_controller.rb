@@ -1,0 +1,2 @@
+class PieToppingsController < ApplicationController
+end

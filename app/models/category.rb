@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
+  has_many :restaurants
 
 
   validates :name, presence: true
-  validates :restaurant_id, presence: true
 end
