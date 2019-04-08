@@ -6,16 +6,16 @@ class SessionsController < ApplicationController
     if auth_hash = request.env["omniauth.auth"]
       # render :text => auth_hash.inspect -- see notes in Users Model
       user = User.find_or_create_by_omniauth(auth_hash)
-      session[:user_id] = user.id
+      log_in(user)
 
-      redirect_to root_path
+      redirect_to user_path(user)
     else
-      user = User.find_by(email: params[:email])
+      user = User.find_by(email: params[:session][:email])
 
-      if user && user.authenticate(params[:password])
-        session[:user_id] = user.id
+      if user && user.authenticate(params[:session][:password])
+        log_in(user)
 
-        redirect_to root_path
+        redirect_to user_path(user)
       else
         render :new
       end
