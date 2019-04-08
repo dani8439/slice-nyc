@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :user_restaurants
   has_many :restaurants, through: :user_restaurants
-  has_many :pie_ratings, through: :user_restaurants 
+  has_many :pie_ratings, through: :user_restaurants
 
   has_secure_password
 
@@ -19,7 +19,6 @@ class User < ApplicationRecord
       user.provider = auth_hash["info"]["provider"]
       user.uid = auth_hash["info"]["uid"]
       user.password = SecureRandom.hex
-
 
     end
   end

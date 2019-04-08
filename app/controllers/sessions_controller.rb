@@ -22,6 +22,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    session[:user_id] = nil
+    render :text => "You've logged out!"
+  end
+
   private
 
   def auth
