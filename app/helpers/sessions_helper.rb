@@ -13,4 +13,9 @@ module SessionsHelper
   def logged_in?
     !!current_user
   end
+
+  def require_login
+    flash[:alert] = "Login Required"
+    redirect_to login_path unless logged_in?
+  end
 end
