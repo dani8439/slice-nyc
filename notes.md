@@ -25,17 +25,16 @@ Implement an authentication system?
 
 Omniauth for third party (facebook) login.
 
-Nested routes: Restaurant within user? Pie within restaurant (for new, index)
+Nested routes: Restaurant within user? Pie within restaurant (for new, index) -- nothing within user.
 
 Models:
 
-  User - has_many :restaurants, has_many :categories, through: :restaurants, has_many :ratings, through: :restaurants, has_many :pies, through: :restaurants
+  User
     - email
     - password_digest
     - UID
 
   Restaurant - NOT JOIN TABLE. Need to amend after meeting with Kevin, notes in notebook.
-    JOIN TABLE belongs_to :user, has_many :categories, has_many :pies, has_many :ratings
     - name
     - neighborhood -- ? Category of it's own?
     - multiple locations ?
@@ -76,3 +75,15 @@ Models:
   <!-- Menu a category of it's own? -- NOPE
     - full menu
     - only pizza -->
+
+    User_Restaurants - Join table of Users and Restaurants.
+    - user_id
+    - restaurant_id
+
+    Pie_Ratings - Join table of Ratings and Pies.
+    - pie_id
+    - user_id
+    - taste_score
+    - comments
+
+    Pie_Toppings - Join table of Pies and Toppings
