@@ -3,13 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # auth_hash = request.env['omniauth.auth']
-    # render :text => auth_hash.inspect -- see notes in Users Model
-
     if auth_hash = request.env["omniauth.auth"]
       user = User.find_or_create_by_omniauth(auth_hash)
       log_in(user)
 
+      flash[:alert] = "Welcome #{user.username}!"
       redirect_to user_path(user)
     else
       user = User.find_by(email: params[:session][:email])
@@ -17,6 +15,7 @@ class SessionsController < ApplicationController
       if user && user.authenticate(params[:session][:password])
         log_in(user)
 
+        flash[:alert] = "Welcome #{user.username}!"
         redirect_to user_path(user)
       else
         render :new

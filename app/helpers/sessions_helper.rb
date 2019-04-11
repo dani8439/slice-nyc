@@ -1,5 +1,5 @@
 module SessionsHelper
-  
+
   def log_in(user)
     session[:user_id] = user.id
   end
@@ -15,7 +15,9 @@ module SessionsHelper
   end
 
   def require_login
-    flash[:alert] = "Login Required"
-    redirect_to login_path unless logged_in?
+    unless logged_in?
+      flash[:alert] = "Login is required"
+      redirect_to login_path
+    end 
   end
 end
