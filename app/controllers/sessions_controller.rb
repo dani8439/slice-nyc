@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @user = User.new
   end
 
   def create
@@ -18,6 +19,7 @@ class SessionsController < ApplicationController
         flash[:alert] = "Welcome #{user.username}!"
         redirect_to user_path(user)
       else
+        # flash[:error] would go here for wrong password. have to add information to view to show it.
         render :new
       end
     end
