@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  padding-top: 0px;
+  padding-bottom: 30px;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #CE0A1D;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav a {
+  color: white;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
