@@ -14,7 +14,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-        <a class="navar-brand" href="<%= root_url %>">Home</a>
+        <a class="logo" href="<%= root_url %>">SliceNYC</a>
 
         <% if logged_in? %>
           <%= link_to "#{current_user.username}'s Profile", user_path(current_user), class:"navbar-brand" %>

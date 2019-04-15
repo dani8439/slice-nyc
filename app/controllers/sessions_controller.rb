@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       if user && user.authenticate(params[:session][:password])
         log_in(user)
 
-        flash[:alert] = "Welcome #{user.username}!"
+        flash[:alert] = "Welcome #{user.username.capitalize}!"
         redirect_to user_path(user)
       else
         # flash[:error] would go here for wrong password. have to add information to view to show it.
@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil #or session.delete(:user_id)
     redirect_to root_path
-    # render :text => "You've logged out!"
+    flash[:alert] = "See you next time!"
   end
 
   private

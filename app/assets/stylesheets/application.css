@@ -24,12 +24,34 @@ h1 {
   font-family: 'Crimson Text', serif;
 }
 
+h2 {
+  font-family: 'Crimson Text', serif;
+}
+
+h3 {
+  font-family: 'Crimson Text', serif;
+}
+
+h4 {
+  font-family: 'Crimson Text', serif;
+}
+
 li {
   font-family: 'Crimson Text', serif;
 }
 
 p {
   font-family: 'Crimson Text', serif;
+}
+
+.alert {
+  font-size: 18px;
+  font-family: 'Crimson Text', serif;
+  color: #5C6262;
+  background-color: #C9F1F6;
+  margin: 10px 0px;
+  padding: 12px;
+  vertical-align: middle;
 }
 
 /* Navigation */
