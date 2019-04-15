@@ -44,6 +44,10 @@ p {
   font-family: 'Crimson Text', serif;
 }
 
+footer {
+
+}
+
 .alert {
   font-size: 18px;
   font-family: 'Crimson Text', serif;
@@ -71,6 +75,14 @@ p {
   font-family: 'Crimson Text', serif;
 }
 
+
+.nav ul {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .theme-dropdown .dropdown-menu {
   position: static;
