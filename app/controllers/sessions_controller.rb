@@ -19,11 +19,12 @@ class SessionsController < ApplicationController
         flash[:alert] = "Welcome #{user.username.capitalize}!"
         redirect_to user_path(user)
       else
-        # flash[:error] would go here for wrong password. have to add information to view to show it.
+        flash[:error_alert] = "Your email or password is incorrect."
         render :new
       end
     end
   end
+
 
   def destroy
     session[:user_id] = nil #or session.delete(:user_id)

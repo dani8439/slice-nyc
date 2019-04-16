@@ -1,9 +1,5 @@
 <h1>Login</h1>
 
-<% if flash[:error] %>
-  <div><%= flash[:error] %></div>
-<% end %>
-
 <%= form_for :session, url: login_path, method: :post do |f| %>
 
 <div >

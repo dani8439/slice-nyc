@@ -71,7 +71,7 @@ footer {
 
 /* Colors */
 .btn-regular {
-  
+
 }
 
 .btn-regular:hover {
@@ -97,10 +97,15 @@ footer {
  vertical-align: middle;
 }
 
-.error {
-  color: ;
-  background-color: ;
-  border-color: ;
+.error_alert {
+  font-size: 18px;
+  font-family: 'Crimson Text', serif;
+  color: #FEFEFE;
+  background-color: #FE1313;
+  border-color: #FE1313;
+  margin: 10px 0px;
+  padding: 12px;
+  vertical-align: middle;
 }
 
 /* Navigation */
