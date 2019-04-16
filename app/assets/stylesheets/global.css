@@ -55,6 +55,38 @@ footer {
 
 }
 
+/* Buttons */
+
+.button {
+  padding: 7px 1.5em 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.button,
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Colors */
+.btn-regular {
+
+}
+
+.btn-regular:hover {
+
+}
+
+.btn-add {
+
+}
+
+.btn-add:hover {
+
+}
+
+/* alerts */
 .alert {
  font-size: 18px;
  font-family: 'Crimson Text', serif;
@@ -63,6 +95,12 @@ footer {
  margin: 10px 0px;
  padding: 12px;
  vertical-align: middle;
+}
+
+.error {
+  color: ;
+  background-color: ;
+  border-color: ;
 }
 
 /* Navigation */
