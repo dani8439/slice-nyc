@@ -63,19 +63,27 @@ footer {
   display: inline-block;
 }
 
-.button,
+/* .button,
 .button a {
   color: white;
   text-decoration: none;
+} */
+
+.button:not(:disabled):not(.disabled) {
+  cursor: pointer;
 }
 
 /* Colors */
 .btn-regular {
-
+  font-family: 'Crimson Text', serif;
+  font-size: 1em;
 }
 
 .btn-regular:hover {
-
+  font-family: 'Crimson Text', serif;
+  background-color: #41BC6E;
+  color: white;
+  font-size: 1em;
 }
 
 .btn-add {

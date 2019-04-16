@@ -5,3 +5,12 @@ input {
 .field_with_errors input {
   border-color: red;
 }
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}

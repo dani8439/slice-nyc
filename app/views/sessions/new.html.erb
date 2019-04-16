@@ -2,7 +2,7 @@
 
 <%= form_for :session, url: login_path, method: :post do |f| %>
 
-<div >
+<div>
   <%= f.label :email %><br>
   <%= f.text_field :email %><br>
 
@@ -11,7 +11,7 @@
 </div>
 
 <div>
-  <%= f.submit "Log In"%><br>
+  <%= f.submit "Log In", class: "button btn-regular" %><br></br>
 </div>
 
 <div id="facebook_login">
