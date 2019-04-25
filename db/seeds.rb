@@ -11,7 +11,7 @@ cat2 = Category.create(name: "Coal Fired"),
 cat3 = Category.create(name: "Commercial Gas Oven"),
 
 
-pizza1 = Pie.create(name: "Neopolitan", crust: "Thin", cheese: "Mozzarella", shape: "Round"),
+pizza1 = Pie.create(name: "Neopolitan", crust: "Thin", cheese: "Mozzarella", shape: "Round",),
 pizza2 = Pie.create(name: "Chicago-Style/Deep Dish", crust: "Deep-dish", cheese: "Mozzarella", shape: "Round", pan: "Oiled Steel Pan"),
 pizza3 = Pie.create(name: "St. Louis Style", crust: "Cracker", cheese: "Provel", shape: "Round"),
 pizza4 = Pie.create(name: "California/Gourmet Style", crust: "Thin", cheese: "Optional", shape: "Round"),
@@ -76,7 +76,7 @@ top46 = Topping.create(name: "Parmigiana"),
 top47 = Topping.create(name: "Parsley"),
 top48 = Topping.create(name: "Pear Tomatoes"),
 top49 = Topping.create(name: "Pecorino"),
-top50 = Topping.create(name: "Pepperoncini")
+top50 = Topping.create(name: "Pepperoncini"),
 top51 = Topping.create(name: "Pepperoni"),
 top52 = Topping.create(name: "Peppers"),
 top53 = Topping.create(name: "Pesto"),
@@ -104,4 +104,4 @@ top74 = Topping.create(name: "Sweet Sausage"),
 top75 = Topping.create(name: "Thyme"),
 top76 = Topping.create(name: "Tomato"),
 top77 = Topping.create(name: "Truffle Pate"),
-top78 = Topping.create(name: "White Anchovies"),
+top78 = Topping.create(name: "White Anchovies")
