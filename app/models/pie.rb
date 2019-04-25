@@ -6,4 +6,6 @@ class Pie < ApplicationRecord
   validates :name, presence: true
   validates :cheese, presence: true
   validates :crust, presence: true
+  validates :shape, presence: true
+  # validates :pan, presence: true
 end

@@ -1,4 +1,4 @@
-MVP:
+Minimum Viable Product:
 
 User can signup/login using email, or do so through facebook.
 
