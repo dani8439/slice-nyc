@@ -4,7 +4,7 @@ Information that users may input to catalogue Pizza:
   - restaurant's are sit down, take out, or standing room only.
   - if other food aside from pizza is available.
   - is delivery available.
-  - style of pizza available at the restaurant: Neapolitan, Chicago-Style/Deep Dish, St. Louis Style, California/Gourmet Style, Greek, Sicilian, Detroit, Grandma/Grandpa Pies.
+  - style of pizza available at the restaurant: Neapolitan, NY Style, Chicago-Style/Deep Dish, St. Louis Style, California/Gourmet Style, Greek, Sicilian, Detroit, Grandma/Grandpa Pies.
   - Thin Crust/Thick crust.
   - Aged or un-aged dough.
   - Fresh Mozzarella or commercial - and is it homemade? (Don't know if this is actually necessary)
