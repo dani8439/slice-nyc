@@ -14,19 +14,22 @@
     <header>
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-          <div class="navbar-header">
           <a class="logo" href="<%= root_url %>">SliceNYC</a>
-
-          <% if logged_in? %>
-            <%= link_to "#{current_user.username.capitalize}'s Profile", user_path(current_user), class:"navbar-brand" %>
-            <%= link_to "Log Out", logout_path, method: :delete, class:"navbar-brand" %>
-          <% else %>
-            <%= link_to "Login", login_path %>
-            <%= link_to "Sign Up", signup_path %>
-          <% end %>
+          <nav>
+            <ul>
+              <li><%= link_to "Pies", pies_path%></li>
+              <li><%= link_to "Restaurants", restaurants_path %></li>
+              <% if logged_in? %>
+                <%= link_to "#{current_user.username.capitalize}'s Profile", user_path(current_user), class:"navbar-brand" %>
+                <%= link_to "Log Out", logout_path, method: :delete, class:"navbar-brand" %>
+              <% else %>
+                <%= link_to "Login", login_path %>
+                <%= link_to "Sign Up", signup_path %>
+              <% end %>
+            </ul>
+          </nav>
           </div>
         </div>
-      </div>
     </header>
 
 
