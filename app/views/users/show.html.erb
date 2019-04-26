@@ -16,7 +16,7 @@
 
   <% @pies.each do |pie| %>
     <ul>
-      <li><%= pie.name %></li>
+      <li><%= link_to pie.name, py_path(pie.name) %></li>
     </ul>
   <% end %>
 
