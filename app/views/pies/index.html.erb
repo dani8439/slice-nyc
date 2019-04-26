@@ -1,7 +1,7 @@
 <h1>Pizza</h1>
 
 <% @pies.each do |pie| %>
-  <li><%= pie.name %> : A <%= pie.shape %> shaped <%= pie.crust %> crust pie  with <%= pie.cheese %> cheese.
+  <li><%= link_to pie.name, py_path(pie.name) %> : A <%= pie.shape %> shaped <%= pie.crust %> crust pie  with <%= pie.cheese %> cheese.
   <% if pie.pan? %>
      Baked in an <%= pie.pan %> pan. </li>
   <% end %>
