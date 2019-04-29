@@ -3,6 +3,8 @@
 <% @pies.each do |pie| %>
   <li><%= link_to pie.name, py_path(pie.id) %> : A <%= pie.shape %> shaped <%= pie.crust %> crust pie  with <%= pie.cheese %> cheese.
   <% if pie.pan? %>
-     Baked in an <%= pie.pan %> pan. </li>
+     Baked in an <%= pie.pan %>. </li>
+  <% elsif pie.additional_comments? %>
+    <%= pie.additional_comments %>
   <% end %>
 <% end %>

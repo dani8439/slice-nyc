@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-cat1 = Category.create(name: "Coal Fired"),
-cat2 = Category.create(name: "Commercial Gas Oven"),
-cat3 = Category.create(name: "Wood Fired"),
+cat1 = Category.create(name: "Coal Fired", comments: "New York-style pizza and New Haven-style pizza are often cooked in coal-fired pizza ovens. A coal-fired oven can reach 900 °F (482 °C) and cook a pie in two to three or five minutes. Pizzerias outside of the Northeastern United States that feature coal-fired ovens are uncommon enough to be noted in travel guides. There are only five coal-fired ovens located west of the Mississippi."),
+cat2 = Category.create(name: "Commercial Gas Oven", comments: "Most commercial pizza gas ovens cook at temperatures ranging from 700 to 800 degrees."),
+cat3 = Category.create(name: "Wood Fired", comments: "Wood-fire brick ovens use a small fire to heat a large solid oven. The oven holds the heat for a long time, so this type of cooking is very economical. Temperatures in a wood-fired oven can reach 800 °F (426 °C)."),
 
 
 pizza1 = Pie.create(name: "California/Gourmet Style", crust: "Thin", cheese: "Optional", shape: "Round"),
@@ -21,7 +21,7 @@ pizza6 = Pie.create(name: "Greek Style", crust: "Somewhere between crunchy and t
 pizza7 = Pie.create(name: "Italian Tomato Pie/New Jersey Style", crust: "Thin", cheese: "Grated Romano", shape: "Square", pan: "Steel Rectangular Pan", additional_comments: "Cheese is optional"),
 pizza8 = Pie.create(name: "Neopolitan", crust: "Thin", cheese: "Mozzarella", shape: "Round",),
 pizza9 = Pie.create(name: "NY Style", crust: "Thin", cheese: "Mozzarella", shape: "Round"),
-pizza10 = Pie.create(name: "Pizza Margherita", crust: "Thin", cheese: "Fresh Mozzarella", shape: "Round"),
+pizza10 = Pie.create(name: "Pizza Margherita", crust: "Thin", cheese: "Fresh Mozzarella", shape: "Round", additional_comments: "Pizza Margherita is a variant of Neopolitan Pizza."),
 pizza11 = Pie.create(name: "Sicilian Style", crust: "Thick", cheese: "Mozzarella", shape: "Rectangle"),
 pizza12 = Pie.create(name: "St. Louis Style", crust: "Cracker", cheese: "Provel", shape: "Round"),
 pizza13 = Pie.create(name: "White Clam Pie", crust: "Thin", shape: "Round", cheese: "Grated Romano", additional_comments: "Whole or Chopped clams, garlic, olive oil, and oregano"),

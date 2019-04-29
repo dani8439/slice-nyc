@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2019_04_05_192214) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.string "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
