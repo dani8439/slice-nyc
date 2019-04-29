@@ -1,0 +1,8 @@
+<h1>Oven Method</h1>
+
+<% @categories.each do |cat| %>
+  <ul>
+    <li><%= link_to cat.name, category_path(cat.id) %></li>
+  </ul>
+
+<% end %>

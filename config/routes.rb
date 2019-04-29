@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   resources :pie_toppings
   resources :user_restaurants
   resources :pie_ratings

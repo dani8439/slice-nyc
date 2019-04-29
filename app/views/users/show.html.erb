@@ -1,7 +1,8 @@
 <div class="user_home">
   <h2>Let's get eating <%= @user.username.capitalize %>. Where would you like to start?</h2>
 
-  <h3><%= link_to "By Pizza Style", categories_path %></h3>
+  <h3><%= link_to "By Oven Method", categories_path %></h3>
+  <h3><%= link_to "By Pizza Style", pies_path %></h3>
   <h3>By Neighborhood</h3>
   <h3><%= link_to "My Rated Pizza's", user_restaurant_path %></h3>
 
