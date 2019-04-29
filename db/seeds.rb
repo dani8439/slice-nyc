@@ -9,7 +9,7 @@
 
 cat1 = Category.create(name: "Coal Fired", comments: "New York-style pizza and New Haven-style pizza are often cooked in coal-fired pizza ovens. A coal-fired oven can reach 900 °F (482 °C) and cook a pie in two to three or five minutes. Pizzerias outside of the Northeastern United States that feature coal-fired ovens are uncommon enough to be noted in travel guides. There are only five coal-fired ovens located west of the Mississippi."),
 cat2 = Category.create(name: "Commercial Gas Oven", comments: "Most commercial pizza gas ovens cook at temperatures ranging from 700 to 800 degrees."),
-cat3 = Category.create(name: "Wood Fired", comments: "Wood-fire brick ovens use a small fire to heat a large solid oven. The oven holds the heat for a long time, so this type of cooking is very economical. Temperatures in a wood-fired oven can reach 800 °F (426 °C)."),
+cat3 = Category.create(name: "Wood Fired/Brick Oven", comments: "Wood-fire brick ovens use a small fire to heat a large solid oven. The oven holds the heat for a long time, so this type of cooking is very economical. Temperatures in a wood-fired oven can reach 800 °F (426 °C)."),
 
 
 pizza1 = Pie.create(name: "California/Gourmet Style", crust: "thin", cheese: "optional", shape: "round"),
@@ -26,6 +26,26 @@ pizza11 = Pie.create(name: "Sicilian Style", crust: "thick", cheese: "mozzarella
 pizza12 = Pie.create(name: "St. Louis Style", crust: "cracker", cheese: "provel", shape: "round", additional_comments: "Provel cheese is a combination of cheddar, Swiss and provolone cheeses."),
 pizza13 = Pie.create(name: "White Clam Pie", crust: "thin", shape: "round", cheese: "grated Romano", additional_comments: "Made with whole or chopped clams, garlic, olive oil, and oregano. Sometimes cheese is omitted."),
 
+
+
+restaurant1 = Restaurant.create(name: "Giuseppina's", neighborhood: "South Slope", borough: "Brooklyn", sit_down_or_take_out: "sit down", category_id: ""),
+restaurant2 = Restaurant.create(name: "Adelina's", neighborhood: "Greenpoint", borough: "Brooklyn", sit_down_or_take_out: "sit down", category_id: ""),
+restaurant3 = Restaurant.create(name: "Santa Panza", neighborhood: "Bushwick", borough: "Brooklyn", sit_down_or_take_out: "sit down", category_id: "3"),
+restaurant4 = Restaurant.create(name: "NY Pizza Suprema", neighborhood: "Midtown", borough: "Manhattan", sit_down_or_take_out: "sit down" , category_id: "" ),
+restaurant5 = Restaurant.create(name: "Ops", neighborhood: "Bushwick" , borough: "Brooklyn", sit_down_or_take_out: "sit down" , category_id: "3" ),
+restaurant6 = Restaurant.create(name: "Speedy Romeo" , neighborhood: "Clinton Hill" , borough: "Brooklyn", sit_down_or_take_out: "sit down" , category_id: "", multiple_locations: "true" ),
+restaurant7 = Restaurant.create(name: "Di Fara" , neighborhood: "Midwood", borough: "Brooklyn", sit_down_or_take_out: "sit down", category_id: ""),
+restaurant8 = Restaurant.create(name: "Price Street Pizza", neighborhood: "Nolita" , borough: "Manhattan" , sit_down_or_take_out: "sit down", category_id: ""),
+restaurant9 = Restaurant.create(name: "Lucali", neighborhood: "Carroll Gardens" , borough: "Brooklyn", sit_down_or_take_out: "sit down" , category_id: ""),
+restaurant10 = Restaurant.create(name: "Patsy's Pizzeria", neighborhood: "East Harlem" , borough: "Manhattan" , sit_down_or_take_out: "sit down", category_id: "1" ),
+restaurant11 = Restaurant.create(name: "Motorino" , neighborhood: "East Village" , borough: "Manhattan", sit_down_or_take_out: "sit down", category_id: "" , multiple_locations: "true"),
+restaurant12 = Restaurant.create(name: "Totonno's" , neighborhood: "Coney Island" , borough: "Brooklyn", sit_down_or_take_out: "sit down", category_id: ""),
+restaurant13 = Restaurant.create(name: "Roberta's", neighborhood: "Bushwick", borough: "Brooklyn" , sit_down_or_take_out: "sit down", category_id: ""),
+restaurant14 = Restaurant.create(name: "Joe & Pat's", neighborhood: "Castleton Corners", borough: "Staten Island", sit_down_or_take_out: "sit down", category_id: "", multiple_locations: "true" ),
+restaurant15 = Restaurant.create(name: "Joe's Pizza", neighborhood: "West Village", borough: "Manhattan", sit_down_or_take_out: "standing room only", category_id: "", multiple_locations: "true"),
+restaurant16 = Restaurant.create(name: "Sal and Carmines", neighborhood: "Manhattan Valley", borough: "Manhattan", sit_down_or_take_out: "sit down", category_id: "" ),
+restaurant17 = Restaurant.create(name: "MAMA'S TOO!" , neighborhood: "Manhattan Valley" , borough: "Manhattan", sit_down_or_take_out: "sit down", category_id: ""),
+restaurant18 = Restaurant.create(name: "Paulie Gee's", neighborhood:  "Greenpoint", borough: "Brooklyn" , sit_down_or_take_out: "sit down", category_id: "" ),
 
 
 top1 = Topping.create(name: "Anchovies"),
