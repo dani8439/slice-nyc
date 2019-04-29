@@ -1,25 +1,9 @@
 <div class="user_home">
   <h2>Let's get eating <%= @user.username.capitalize %>. Where would you like to start?</h2>
 
-  <h3>List of Restaurants</h3>
-  <li>By Borough</li>
-  <li>By Neighborhood</li>
+  <h3><%= link_to "By Pizza Style", categories_path %></h3>
+  <h3>By Neighborhood</h3>
+  <h3><%= link_to "My Rated Pizza's", user_restaurant_path %></h3>
 
 
-  <h3>Pizza Styles</h3>
-  <% @categories.each do |cat| %>
-    <ul>
-      <li><%= link_to cat.name, category_path(cat.name) %></li>
-    </ul>
-  <% end %>
-  <h3>Pizza Type</h3>
-
-  <% @pies.each do |pie| %>
-    <ul>
-      <li><%= link_to pie.name, py_path(pie.name) %></li>
-    </ul>
-  <% end %>
-
-  <h3>List of User's Restaurants (<%= @user.username.capitalize%>'s Restaurants)</h3>
-  <li>By Rating</li>
 </div>

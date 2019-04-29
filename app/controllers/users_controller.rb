@@ -18,9 +18,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @toppings = Topping.all
-    @pies = Pie.all
-    @categories = Category.all
   end
 
   private

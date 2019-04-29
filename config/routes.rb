@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
+  
   resources :pie_toppings
   resources :user_restaurants
   resources :pie_ratings
