@@ -1,0 +1,32 @@
+<h1>New Restaurant</h1>
+
+<%= form_for @restaurant do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :neighborhood %><br>
+    <%= f.text_field :neighborhood %><br>
+
+    <%= f.label :borough %><br>
+    <%= f.text_field :borough %><br>
+
+    <%= f.label :sit_down_or_take_out %><br>
+    <%= f.text_field :sit_down_or_take_out %><br>
+
+    <%= f.label :oven %><br>
+    <%= f.text_field :oven %><br>
+
+    <%= f.label :multiple_locations %><br>
+    <%= f.check_box :multiple_locations, {}, "true", "false" %><br>
+
+  </div>
+
+
+  <%= f.submit "Create Restaurant", class: "button btn-regular" %>
+<% end %>
+
+
+
+
+t.integer "category_id"

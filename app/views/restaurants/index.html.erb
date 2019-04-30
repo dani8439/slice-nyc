@@ -4,5 +4,7 @@
     <% @restaurants.each do |rest| %>
       <p><%= link_to rest.name, restaurant_path(rest.id) %></p>
     <% end %>
-    
+
+    <h2><%= link_to "Create a New Restaurant", new_restaurant_path %></h2>
+
 </div>
