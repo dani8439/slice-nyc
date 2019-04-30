@@ -10,7 +10,11 @@
     <p>Made in a <%= @restaurant.oven %>.</p>
   <% end %>
 
-  <p><%= @restaurant.sit_down_or_take_out.capitalize %></p>
+  <% if @restaurant.multiple_locations == true %>
+    <p>More than one location.</p>
+  <% end %>
+
+  <p><%= @restaurant.sit_down_or_take_out.capitalize %>.</p>
 
   <h4><%= link_to "Write a review", user_restaurant_path(@restaurant.id)%></h4>
 

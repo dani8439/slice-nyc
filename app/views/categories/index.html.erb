@@ -1,10 +1,13 @@
-<h1>Categories</h1>
-
-<% @categories.each do |cat| %>
-  <li><%= link_to cat.name, category_path(cat.id) %> : A <%= cat.shape %> shaped <%= cat.crust %> crust pie  with <%= cat.cheese %> cheese.
-  <% if cat.pan? %>
-     Baked in an <%= cat.pan %>. </li>
-  <% elsif cat.additional_comments? %>
-    <%= cat.additional_comments %>
-  <% end %>
-<% end %>
+<div class="category">
+  <h1>Categories</h1>
+  <div class="category_content">
+    <% @categories.each do |cat| %>
+      <p><%= link_to cat.name, category_path(cat.id) %> : A <%= cat.shape %> shaped <%= cat.crust %> crust pie  with <%= cat.cheese %> cheese.
+      <% if cat.pan? %>
+         Baked in an <%= cat.pan %>. </p>
+      <% elsif cat.additional_comments? %>
+        <%= cat.additional_comments %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

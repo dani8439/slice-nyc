@@ -1,5 +1,9 @@
-<h1><%= @category.name %> Pizza </h1>
+<div class="category">
+  <h1><%= @category.name %> Pizza </h1>
+  <div class="category_content">
+    <% @category.restaurants.each do |rest| %>
+      <p><%= link_to rest.name, restaurant_path(rest.id) %> - <%= rest.neighborhood %>, <%= rest.borough %></p>
+    <% end %>
+  </div>
 
-<% @category.restaurants.each do |rest| %>
-  <li><%= rest.name %> - <%= rest.neighborhood %>, <%= rest.borough %></li>
-<% end %>
+</div>
