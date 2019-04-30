@@ -1,5 +1,5 @@
 <h1><%= @category.name %> Pizza </h1>
 
-<% @category.restaurants.sort.each do |rest| %>
-  <li><%= rest.name %></li>
+<% @category.restaurants.each do |rest| %>
+  <li><%= rest.name %> - <%= rest.neighborhood %>, <%= rest.borough %></li>
 <% end %>

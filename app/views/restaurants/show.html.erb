@@ -1,0 +1,18 @@
+<div class="restaurant">
+
+  <h1><%= @restaurant.name %></h1>
+
+  <p>Location: <%= @restaurant.borough %>, <%= @restaurant.neighborhood %></p>
+
+  <p>Style Pizza: <%= @restaurant.category.name %></p>
+
+  <% if @restaurant.oven? %>
+    <p>Made in a <%= @restaurant.oven %>.</p>
+  <% end %>
+
+  <p><%= @restaurant.sit_down_or_take_out.capitalize %></p>
+
+  <h4><%= link_to "Write a review", user_restaurant_path(@restaurant.id)%></h4>
+
+
+</div>
