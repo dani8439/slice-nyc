@@ -14,7 +14,11 @@ ActiveRecord::Schema.define(version: 2019_04_05_192214) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.string "comments"
+    t.string "crust"
+    t.string "cheese"
+    t.string "shape"
+    t.string "pan"
+    t.string "additional_comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,9 +43,6 @@ ActiveRecord::Schema.define(version: 2019_04_05_192214) do
     t.string "name"
     t.string "crust"
     t.string "cheese"
-    t.string "shape"
-    t.string "pan"
-    t.string "additional_comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 2019_04_05_192214) do
     t.string "neighborhood"
     t.string "borough"
     t.string "sit_down_or_take_out"
+    t.string "oven"
     t.boolean "multiple_locations", default: false
     t.integer "category_id"
     t.datetime "created_at", null: false
