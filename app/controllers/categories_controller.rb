@@ -8,4 +8,11 @@ class CategoriesController < ApplicationController
     @category = Category.find_by(id: params[:id])
   end
 
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name, :crust, :cheese)
+  end
+
 end

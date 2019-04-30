@@ -15,6 +15,6 @@ class PiesController < ApplicationController
   private
 
   def pie_params
-    params.require(:pie).permit(:name, :crust, :cheese, :shape)
+    params.require(:pie).permit(:name, :crust, :cheese)
   end
 end

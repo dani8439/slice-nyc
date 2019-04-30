@@ -1,8 +1,10 @@
-<h1>Oven Method</h1>
+<h1>Categories</h1>
 
 <% @categories.each do |cat| %>
-  <ul>
-    <li><%= link_to cat.name, category_path(cat.id) %></li>
-  </ul>
-
+  <li><%= link_to cat.name, category_path(cat.id) %> : A <%= cat.shape %> shaped <%= cat.crust %> crust pie  with <%= cat.cheese %> cheese.
+  <% if cat.pan? %>
+     Baked in an <%= cat.pan %>. </li>
+  <% elsif cat.additional_comments? %>
+    <%= cat.additional_comments %>
+  <% end %>
 <% end %>
