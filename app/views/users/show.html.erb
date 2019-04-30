@@ -1,10 +1,10 @@
-<div class="user_home">
+<div class="user">
   <h2>Let's get eating <%= @user.username.capitalize %>. Where would you like to start?</h2>
 
-  <h3><%= link_to "By Category", categories_path %></h3>
-  <h3><%= link_to "By Restaurants", restaurants_path %></h3>
-  <h3>By Neighborhood</h3>
-  <h3><%= link_to "My Rated Pizza's", user_restaurant_path %></h3>
+    <h3><%= link_to "By Category", categories_path %></h3>
+    <h3><%= link_to "By Restaurants", restaurants_path %></h3>
+    <h3><%= link_to "By Location", restaurants_path() %></h3>
+    <h3><%= link_to "My Rated Pizza's", user_restaurant_path %></h3>
 
 
 </div>

@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :pies
   resources :categories
   resources :restaurants
+  
+  # resources :categories do ??
+  #   resources :restaurants
+  # end
   resources :users, only: [:create, :show]
 
   get '/signup', :to => 'users#new'
