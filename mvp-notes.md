@@ -13,4 +13,4 @@ User can rate Pizza's from a restaurant.
 
 Extra:
 User can rate restaurant as well.
-By toppings. (Can see all pepperoni pizza in Manhattan, ex.) (Just a further filtering tool)
+By toppings. (Can see all pepperoni pizza in Manhattan, ex.) (Just a further filtering tool) -- Nope, topping must be part of MVP for project to work.

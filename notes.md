@@ -89,3 +89,13 @@ Models:
     - comments
 
     Pie_Toppings - Join table of Pies and Toppings
+
+
+
+
+  //////////
+  Rejigged Category.
+
+  A pie should be something in system, but joined with toppings table, and user_id? No topping can also be a choice. So that user can say category.pie.toppings == Margherita pie with extra cheese for example. And then grade that.
+
+  What attributes to put on pie so that there is one NY Style pepperoni pizza in the database and not twenty? Toppings must be added. 
