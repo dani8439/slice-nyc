@@ -6,7 +6,9 @@ User can access database of Restaurants. Can add a restaurant if it is not alrea
 
 User can choose from category of Pizza Type and Oven type. (Coal Fired Thin Crust, Gas Oven NY-Style, etc)
 
-User can filter Restaurants by neighborhood and borough.
+User can add sauces, cheeses, crusts, and toppings. 
+
+User can filter Restaurants by neighborhood and borough?
 
 User can rate Pizza's from a restaurant.
 

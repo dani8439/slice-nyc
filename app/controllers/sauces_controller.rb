@@ -1,0 +1,2 @@
+class SaucesController < ApplicationController
+end
