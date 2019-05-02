@@ -4,7 +4,5 @@ class Pie < ApplicationRecord
   has_many :sauces
   has_many :toppings
 
-
-  # validates :name, presence: true
-  # validates :crust, presence: true
+  validates :name, presence: true 
 end

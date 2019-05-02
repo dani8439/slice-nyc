@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_05_192214) do
+ActiveRecord::Schema.define(version: 2019_05_02_145459) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 2019_04_05_192214) do
     t.string "shape"
     t.string "pan"
     t.string "additional_comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cheeses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "crusts", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,17 +44,13 @@ ActiveRecord::Schema.define(version: 2019_04_05_192214) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pie_toppings", force: :cascade do |t|
-    t.integer "pie_id"
-    t.integer "topping_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "pies", force: :cascade do |t|
     t.string "name"
-    t.string "crust"
-    t.string "cheese"
+    t.integer "category_id"
+    t.integer "cheese_id"
+    t.integer "crust_id"
+    t.integer "sauce_id"
+    t.integer "topping_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,6 +63,12 @@ ActiveRecord::Schema.define(version: 2019_04_05_192214) do
     t.string "oven"
     t.boolean "multiple_locations", default: false
     t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sauces", force: :cascade do |t|
+    t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
