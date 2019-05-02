@@ -7,8 +7,10 @@
 
     <p>Style Pizza: <%= f.collection_select :category_id, Category.all, :name, :name %></p>
 
+    <p>Toppings: <%= f.collection_select :topping_id, Topping.all, :name, :name %></p>
+
 
   </div>
 
-  <%= f.submit "Create Pie" %>
+  <%= f.submit "Create Pie", class: "button btn-regular" %>
 <% end %>

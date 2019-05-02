@@ -18,15 +18,10 @@
     <%= f.text_field :oven %><br>
 
     <%= f.label :multiple_locations %><br>
-    <%= f.check_box :multiple_locations, {}, "True", "False" %><br>
+    <%= f.check_box :multiple_locations, {}, "true", "false" %><br>
 
   </div>
 
 
   <%= f.submit "Create Restaurant", class: "button btn-regular" %>
 <% end %>
-
-
-
-
-t.integer "category_id"

@@ -6,10 +6,10 @@ class PiesController < ApplicationController
 
   def new
     @pie = Pie.new
-    @category = Category.all
-    @cheese = Cheese.all
-    @sauce = Sauce.all
-    @toppings = Topping.all
+    # @category = Category.all
+    # @cheese = Cheese.all
+    # @sauce = Sauce.all
+    # @toppings = Topping.all
   end
 
   def show
@@ -19,6 +19,6 @@ class PiesController < ApplicationController
   private
 
   def pie_params
-    params.require(:pie).permit(:name, :crust, :cheese)
+    params.require(:pie).permit(:name, :crust, cheese_ids: [], topping_ids: [])
   end
 end

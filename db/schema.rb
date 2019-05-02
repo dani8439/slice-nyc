@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_05_02_145459) do
     t.string "name"
     t.string "neighborhood"
     t.string "borough"
-    t.string "sit_down_or_take_out"
+    t.string "seating"
     t.string "oven"
     t.boolean "multiple_locations", default: false
     t.integer "category_id"
