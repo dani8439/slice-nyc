@@ -1,5 +1,5 @@
 class Topping < ApplicationRecord
-  belongs_to :pie
+  has_many :pies 
 
 
   validates :name, presence: true

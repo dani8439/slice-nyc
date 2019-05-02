@@ -7,25 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# cat1 = Category.create(name: "Coal Fired", comments: "New York-style pizza and New Haven-style pizza are often cooked in coal-fired pizza ovens. A coal-fired oven can reach 900 °F (482 °C) and cook a pie in two to three or five minutes. Pizzerias outside of the Northeastern United States that feature coal-fired ovens are uncommon enough to be noted in travel guides. There are only five coal-fired ovens located west of the Mississippi."),
-# cat2 = Category.create(name: "Commercial Gas Oven", comments: "Most commercial pizza gas ovens cook at temperatures ranging from 700 to 800 degrees."),
-# cat3 = Category.create(name: "Wood Fired/Brick Oven", comments: "Wood-fire brick ovens use a small fire to heat a large solid oven. The oven holds the heat for a long time, so this type of cooking is very economical. Temperatures in a wood-fired oven can reach 800 °F (426 °C)."),
-#
-#
-# pizza1 = Pie.create(name: "California/Gourmet Style", crust: "thin", cheese: "optional", shape: "round"),
-# pizza2 = Pie.create(name: "Chicago-Style/Deep Dish", crust: "Deep-dish", cheese: "mozzarella", shape: "round", pan: "oiled steel pan"),
-# pizza3 = Pie.create(name: "Chicago Thin Crust", crust: "thin", cheese: "mozzarella", shape: "round"),
-# pizza4 = Pie.create(name: "Detroit Style", crust: "Deep-Dish", cheese: "mozzarella", shape: "square", pan: "oiled blue steel pan or cast iron", additional_comments: "A carmelized crust is a distinct feature of such a pizza."),
-# pizza5 = Pie.create(name: "Grandma Pie", crust: "thin", cheese: "mozzarella", shape: "rectangular", pan: "olive-oil coated pan"),
-# pizza6 = Pie.create(name: "Greek Style", crust: "somewhere between crunchy and thicker sicilian cousin", cheese: "mozzarella", shape: "round", pan: "oiled shallow pan"),
-# pizza7 = Pie.create(name: "Italian Tomato Pie/New Jersey Style", crust: "thin", cheese: "grated romano", shape: "square", pan: "steel rectangular pan", additional_comments: "Cheese is optional."),
-# pizza8 = Pie.create(name: "Neopolitan", crust: "thin", cheese: "mozzarella", shape: "round", additional_comments: "Has several different variations, such as Pizza Marinara and Pizza Margherita."),
-# pizza9 = Pie.create(name: "NY Style", crust: "thin", cheese: "mozzarella", shape: "round"),
-# pizza10 = Pie.create(name: "Pizza Margherita", crust: "thin", cheese: "fresh mozzarella", shape: "round", additional_comments: "Pizza Margherita is a variant of Neopolitan Pizza."),
-# pizza11 = Pie.create(name: "Sicilian Style", crust: "thick", cheese: "mozzarella", shape: "rectangular"),
-# pizza12 = Pie.create(name: "St. Louis Style", crust: "cracker", cheese: "provel", shape: "round", additional_comments: "Provel cheese is a combination of cheddar, Swiss and provolone cheeses."),
-# pizza13 = Pie.create(name: "White Clam Pie", crust: "thin", shape: "round", cheese: "grated Romano", additional_comments: "Made with whole or chopped clams, garlic, olive oil, and oregano. Sometimes cheese is omitted."),
-
 cat1 = Category.create(name: "California/Gourmet Style", crust: "thin", cheese: "optional", shape: "round"),
 cat2 = Category.create(name: "Chicago-Style/Deep Dish", crust: "Deep-dish", cheese: "mozzarella", shape: "round", pan: "oiled steel pan"),
 cat3 = Category.create(name: "Chicago Thin Crust", crust: "thin", cheese: "mozzarella", shape: "round"),

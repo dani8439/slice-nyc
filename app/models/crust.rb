@@ -1,5 +1,5 @@
 class Crust < ApplicationRecord
-  belongs_to :pie
+  has_many :pies
 
-  validates :name, presence: true 
+  validates :name, presence: true
 end

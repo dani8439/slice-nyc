@@ -8,5 +8,6 @@ class Restaurant < ApplicationRecord
   validates :neighborhood, presence: true
   validates :borough, presence: true
   validates :seating, presence: true
+  validates :category_id, presence: true
 
 end

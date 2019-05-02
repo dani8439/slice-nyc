@@ -1,8 +1,8 @@
 class Pie < ApplicationRecord
-  has_many :cheeses
-  has_many :crusts
-  has_many :sauces
-  has_many :toppings
+  belongs_to :cheese
+  belongs_to :sauce
+  belongs_to :topping
+  belongs_to :crust 
 
   validates :name, presence: true
 
