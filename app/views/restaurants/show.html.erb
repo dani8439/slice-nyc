@@ -14,7 +14,7 @@
     <p>More than one location.</p>
   <% end %>
 
-  <p><%= @restaurant.sit_down_or_take_out.capitalize %>.</p>
+  <p><%= @restaurant.seating.capitalize %>.</p>
 
   <h4><%= link_to "Write a review", user_restaurant_path(@restaurant.id)%></h4>
 

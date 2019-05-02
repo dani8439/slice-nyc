@@ -6,10 +6,13 @@ class PiesController < ApplicationController
 
   def new
     @pie = Pie.new
-    # @category = Category.all
-    # @cheese = Cheese.all
-    # @sauce = Sauce.all
-    # @toppings = Topping.all
+    @category = Category.all
+    @cheese = Cheese.all
+    @sauce = Sauce.all
+    @toppings = Topping.all
+  end
+
+  def create
   end
 
   def show

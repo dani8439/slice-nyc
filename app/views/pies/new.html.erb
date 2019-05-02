@@ -7,6 +7,12 @@
 
     <p>Style Pizza: <%= f.collection_select :category_id, Category.all, :name, :name %></p>
 
+    <p>Crust: <%= f.collection_select :crust_id, Crust.all, :name, :name %></p>
+
+    <p>Sauce: <%= f.collection_select :sauce_id, Sauce.all, :name, :name %></p>
+
+    <p>Cheese: <%= f.collection_select :cheese_id, Cheese.all, :name, :name %></p>
+
     <p>Toppings: <%= f.collection_select :topping_id, Topping.all, :name, :name %></p>
 
 
