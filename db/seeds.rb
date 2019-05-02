@@ -65,6 +65,10 @@ cheese20 = Cheese.create(name: "Sharp Provolone"),
 cheese21 = Cheese.create(name: "Swiss"),
 cheese22 = Cheese.create(name: "Trufﬂe Sottocenere"),
 
+crust1 = Crust.create(name: "Aged"),
+crust2 = Crust.create(name: "Regular"),
+crust3 = Crust.create(name: "Whole Wheat"),
+
 
 restaurant1 = Restaurant.create(name: "Giuseppina's", neighborhood: "South Slope", borough: "Brooklyn", sit_down_or_take_out: "sit down", category_id: "8"),
 restaurant2 = Restaurant.create(name: "Corner Slice at Gotham West", neighborhood: "Hell's Kitchen", borough: "Manhattan", sit_down_or_take_out: "sit down", category_id: "5"),

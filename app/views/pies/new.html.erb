@@ -1,0 +1,14 @@
+<h1>New Pie</h1>
+
+<%= form_for @pie do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+    <p>Style Pizza: <%= f.collection_select :category_id, Category.all, :name, :name %></p>
+
+
+  </div>
+
+  <%= f.submit "Create Pie" %>
+<% end %>

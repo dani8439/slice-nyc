@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
 
+  resources :categories
   resources :cheeses
   resources :crusts
-  resources :sauces
-  resources :user_restaurants
   resources :pie_ratings
-  resources :toppings
-  resources :pies
-  resources :categories
+  resources :pies 
   resources :restaurants
-  
+  resources :sauces
+  resources :toppings
+  resources :user_restaurants
+
+
+
+
   # resources :categories do ??
   #   resources :restaurants
   # end
