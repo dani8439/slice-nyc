@@ -1,6 +1,10 @@
 <div class="pies">
   <h1>Pies</h1>
+  <% @pies.each do |p| %>
+    <h3><%= link_to p.name, py_path(p.id) %></h3>
+  <% end %>
 
-  <%= link_to "Create a Pie", new_py_path %>
+  <br></br>
+  <%= link_to "Create a Pie", new_py_path, class: "button btn-regular" %>
 
 </div>
