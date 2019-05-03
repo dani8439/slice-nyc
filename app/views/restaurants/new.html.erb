@@ -1,6 +1,17 @@
 <h1>New Restaurant</h1>
 
 <%= form_for @restaurant do |f| %>
+<% if @restaurant.errors.any? %>
+  <div id="error_explanation">
+    <h2>There were some errors:</h2>
+    <ul>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
   <div>
     <%= f.label :name %><br>
     <%= f.text_field :name %><br>
@@ -18,7 +29,10 @@
     <%= f.text_field :oven %><br>
 
     <%= f.label :multiple_locations %><br>
-    <%= f.check_box :multiple_locations %><br>
+    <%= f.check_box(:multiple_locations, {}, checked_value = "true", unchecked_value = "false") %><br>
+
+    <%= f.label :category_id %><br>
+    <%= f.collection_select :category_id, Category.all, :name, :name %><br></br>
 
   </div>
 

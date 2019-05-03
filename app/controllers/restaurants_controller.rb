@@ -14,7 +14,9 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    # raise.params.inspect
 
+    # @restaurant.category_id = Category.find_by(id: params[:id])
     if @restaurant.save
       redirect_to @restaurant
     else
