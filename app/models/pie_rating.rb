@@ -1,5 +1,7 @@
 class PieRating < ApplicationRecord
-  belongs_to :user_restaurant
+  belongs_to :pie
+  belongs_to :rating 
+
 
 
   validates :taste_score, presence: true

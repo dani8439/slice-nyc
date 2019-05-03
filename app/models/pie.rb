@@ -1,9 +1,13 @@
 class Pie < ApplicationRecord
   belongs_to :cheese
+  belongs_to :crust
   belongs_to :sauce
   belongs_to :topping
-  belongs_to :crust 
+  has_many :categories
+  has_many :pie_ratings
+  has_many :users, through: :pies_ratings
 
+ 
   validates :name, presence: true
 
   def cheese_ids=(ids)

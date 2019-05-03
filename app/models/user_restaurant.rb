@@ -1,8 +1,8 @@
 class UserRestaurant < ApplicationRecord
   belongs_to :user
-  belong_to :restaurant
-  has_many :pie_ratings
+  belongs_to :restaurant 
+
 
   validates :user_id, presence: true
-  validates :restaurant_id, presence: true 
+  validates :restaurant_id, presence: true
 end

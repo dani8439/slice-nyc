@@ -1,7 +1,7 @@
 class Restaurant < ApplicationRecord
   has_many :user_restaurants
-  has_many :users, through: :user_restaurants
-  belongs_to :category
+  has_many :users, through: :user_restaurants 
+
 
 
   validates :name, presence: true
