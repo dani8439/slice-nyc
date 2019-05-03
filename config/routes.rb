@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :cheeses
   resources :crusts
+  resources :pies
   resources :pie_ratings
-  resources :pies 
   resources :restaurants
   resources :sauces
   resources :toppings
