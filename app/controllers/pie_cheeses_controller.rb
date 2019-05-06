@@ -1,0 +1,2 @@
+class PieCheesesController < ApplicationController
+end

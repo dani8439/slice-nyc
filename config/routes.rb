@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :pie_toppings
+  resources :pie_cheeses
   resources :categories
   resources :cheeses
   resources :crusts

@@ -1,5 +1,6 @@
 class Topping < ApplicationRecord
-  has_many :pies 
+  has_many :pie_toppings
+  has_many :pies, through: :pie_toppings
 
 
 
