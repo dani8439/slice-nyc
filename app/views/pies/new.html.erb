@@ -20,11 +20,11 @@
 
     <p>Crust: <%= f.collection_select :crust_id, Crust.all, :id, :name %></p>
 
-    <p>Sauce: <%= f.collection_select(:sauce_id, Sauce.all, :id, :name, {include_blank: ' '} )%></p>
+    <p>Sauce: <%= f.collection_select(:sauce_id, Sauce.all, :id, :name)%></p>
 
-    <p>Cheese: <%= f.collection_select(:cheese_id, Cheese.all, :id, :name, {include_blank: ' '}) %></p>
+    <p>Cheese: <%= f.collection_select(:cheese_id, Cheese.all, :id, :name) %></p>
 
-    <p>Toppings: <%= f.collection_select(:topping_id, Topping.all, :id, :name, {include_blank: ' '}) %></p>
+    <p>Toppings (hold down CTRL to select more than one): <%= f.collection_select(:topping_id, Topping.all, :id, :name, {}, { multiple: true }) %></p>
 
 
   </div>

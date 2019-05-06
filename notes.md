@@ -103,4 +103,6 @@ Models:
 
   /// For next week:
   user can submit a review
-  link a specific pie with a restaurant so can be rated. 
+  link a specific pie with a restaurant so can be rated.
+
+  nested route: rating within restaurant? Pie within category?
