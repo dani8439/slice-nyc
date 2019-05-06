@@ -13,9 +13,11 @@ class Pie < ApplicationRecord
 
   validates :name, presence: true
 
+# Need to fix this to update both multiple attributes for cheeses and toppings. Must be an array, not a string, etc.
+# don't think accepts nested attributes is way to go. Must change forms too. 
   def cheese_ids=(ids)
     ids.each do |id|
-      cheese = Cheese.find(id)
+      cheese = Cheese.find_by(id: params[:id]) ##?
       self.cheeses << cheese
     end
   end
