@@ -34,6 +34,7 @@ class PiesController < ApplicationController
   end
 
   def update
+    @pie = Pie.find_by(id: params[:id])
     if @pie.update(pie_params)
       redirect_to @pie
     else
