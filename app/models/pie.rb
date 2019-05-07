@@ -12,19 +12,20 @@ class Pie < ApplicationRecord
 
 
   validates :name, presence: true
+  # accepts_nested_attributes_for :toppings
 
 # Need to fix this to update both multiple attributes for cheeses and toppings. Must be an array, not a string, etc.
-# don't think accepts nested attributes is way to go. Must change forms too. 
+# don't think accepts nested attributes is way to go. Must change forms too.
   def cheese_ids=(ids)
     ids.each do |id|
-      cheese = Cheese.find_by(id: params[:id]) ##?
+      cheese = Cheese.find_by(id) 
       self.cheeses << cheese
     end
   end
 
   def topping_ids=(ids)
     ids.each do |id|
-      topping = Topping.find(id)
+      topping = Topping.find_by(id)
       self.toppings << topping
     end
   end
