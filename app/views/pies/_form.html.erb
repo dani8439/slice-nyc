@@ -1,0 +1,32 @@
+<%= form_for @pie do |f| %>
+<% if @pie.errors.any? %>
+  <div id="error_explanation">
+    <h2>There were some errors:</h2>
+    <ul>
+      <% @pie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+      <p>Style Pizza: <%= f.collection_select :category_id, Category.all, :id, :name %></p>
+
+      <p>Crust: <%= f.collection_select :crust_id, Crust.all, :id, :name %></p>
+
+      <p>Sauce: <%= f.collection_select(:sauce_id, Sauce.all, :id, :name)%></p>
+
+      <p>Cheese (hold down CTRL to select more than one): <%= f.collection_select(:cheese_ids, Cheese.all, :id, :name, {}, { multiple: true }) %></p>
+
+      <p>Toppings (hold down CTRL to select more than one): <%= f.collection_select(:topping_ids, Topping.all, :id, :name, {}, { multiple: true }) %></p>
+
+    <p>Link to Restaurant/Review here?</p>
+
+  </div>
+
+  <%= f.submit "Create Pie", class: "button btn-regular" %>
+<% end %>

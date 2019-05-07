@@ -2,12 +2,16 @@
   <h1><%= @pie.name %> Pie</h1>
   <h3>Crust: <%= @pie.crust.name %></h3>
   <h3>Sauce: <%= @pie.sauce.name %></h3>
-  <h3>Cheese: </h3>
+  <h3>Cheese: <% @pie.cheeses.each do |cheese| %></h3>
+    <p><%= cheese.name %></p>
+  <% end %>
 
-  <h3>Toppings: </h3>
+  <h3>Toppings: <% @pie.toppings.each do |topping| %></h3>
+    <p><%= topping.name %></p>
+  <% end %>
 
-  method for listing multiple toppings (have to fix in controller first to add multiple toppings)
 
+  <h2><%= link_to "Edit this Pie", edit_py_path %></h2>
   <h2><%= link_to "Rate this Pie", pie_rating_path %></h2>
 
 </div>

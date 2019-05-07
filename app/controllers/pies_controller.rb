@@ -18,8 +18,8 @@ class PiesController < ApplicationController
     @pie = Pie.new(pie_params)
 
     if @pie.save
-      raise @pie.inspect
-      # redirect_to @pie
+      # raise @pie.inspect
+      redirect_to @pie
     else
       render :new
     end
@@ -27,6 +27,18 @@ class PiesController < ApplicationController
 
   def show
     @pie = Pie.find_by(id: params[:id])
+  end
+
+  def edit
+    @pie = Pie.find_by(id: params[:id])
+  end
+
+  def update
+    if @pie.update(pie_params)
+      redirect_to @pie
+    else
+      render :edit
+    end
   end
 
   private

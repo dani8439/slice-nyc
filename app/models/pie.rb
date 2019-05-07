@@ -12,22 +12,22 @@ class Pie < ApplicationRecord
 
 
   validates :name, presence: true
-  # accepts_nested_attributes_for :toppings
-  # accepts_nested_attributes_for :cheeses
+  accepts_nested_attributes_for :toppings
+  accepts_nested_attributes_for :cheeses
 
 
-# don't think accepts nested attributes is way to go. Must change forms too.
-  def cheese_ids=(ids)
-    ids.each do |id|
-      cheese = Cheese.find_by(id)
-      self.cheeses << cheese
-    end
-  end
 
-  def topping_ids=(ids)
-    ids.each do |id|
-      topping = Topping.find_by(id)
-      self.toppings << topping
-    end
-  end
+  # def cheese_ids=(ids) -- saving blank for some reason? 
+  #   ids.each do |id|
+  #     cheese = Cheese.find_by(id)
+  #     self.cheeses << cheese
+  #   end
+  # end
+
+  # def topping_ids=(ids)
+  #   ids.each do |id|
+  #     topping = Topping.find_by(id)
+  #     self.toppings << topping
+  #   end
+  # end
 end
