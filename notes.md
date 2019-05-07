@@ -90,6 +90,8 @@ Models:
 
     Pie_Toppings - Join table of Pies and Toppings
 
+    Pie_Cheeses - Join table of Pies and Cheeses
+
 
 
 
@@ -106,3 +108,5 @@ Models:
   link a specific pie with a restaurant so can be rated.
 
   nested route: rating within restaurant? Pie within category?
+
+  Users - can add restaurants, can add pies, can add sauces, cheeses, and toppings. Cannot add/edit/ or delete Categories. Can Rate their own pies in their own lists, and can delete their ratings. Can see other user's ratings. Cannot delete anyone elses information. 
