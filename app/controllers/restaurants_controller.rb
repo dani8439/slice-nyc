@@ -14,7 +14,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    
+
     if @restaurant.save
       redirect_to @restaurant
     else
@@ -23,9 +23,16 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.find_by(id: params[:id])
   end
 
   def update
+    @restaurant = Restaurant.find_by(id: params[:id])
+    if @restaurant.update(restaurant_params)
+      redirect_to @restaurant
+    else
+      render :edit
+    end 
   end
 
   private

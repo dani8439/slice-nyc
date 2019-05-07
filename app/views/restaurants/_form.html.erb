@@ -1,0 +1,39 @@
+<%= form_for @restaurant do |f| %>
+<% if @restaurant.errors.any? %>
+  <div id="error_explanation">
+    <h2>There were some errors:</h2>
+    <ul>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :neighborhood %><br>
+    <%= f.text_field :neighborhood %><br>
+
+    <%= f.label :borough %><br>
+    <%= f.text_field :borough %><br>
+
+    <%= f.label :seating %><br>
+    <%= f.text_field :seating %><br>
+
+    <%= f.label :oven %><br>
+    <%= f.text_field :oven %><br>
+
+    <%= f.label :multiple_locations %><br>
+    <%= f.check_box(:multiple_locations, {}, checked_value = "true", unchecked_value = "false") %><br>
+
+    <%= f.label :category_id %><br>
+    <%= f.collection_select :category_id, Category.all, :id, :name %><br></br>
+
+  </div>
+
+
+  <%= f.submit "Submit", class: "button btn-regular" %>
+<% end %>
