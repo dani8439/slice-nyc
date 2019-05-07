@@ -18,7 +18,8 @@ class PiesController < ApplicationController
     @pie = Pie.new(pie_params)
 
     if @pie.save
-      redirect_to @pie
+      raise @pie.inspect
+      # redirect_to @pie
     else
       render :new
     end
