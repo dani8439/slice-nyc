@@ -9,6 +9,8 @@ class Pie < ApplicationRecord
   has_many :categories
   has_many :pie_ratings
   has_many :users, through: :pies_ratings
+  has_many :restaurant_pys
+  has_many :restaurants, through: :restaurant_pys
 
 
   validates :name, presence: true
@@ -17,7 +19,7 @@ class Pie < ApplicationRecord
 
 
 
-  # def cheese_ids=(ids) -- saving blank for some reason? 
+  # def cheese_ids=(ids) -- saving blank for some reason?
   #   ids.each do |id|
   #     cheese = Cheese.find_by(id)
   #     self.cheeses << cheese

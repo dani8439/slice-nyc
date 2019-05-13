@@ -1,0 +1,2 @@
+class RestaurantPiesController < ApplicationController
+end
