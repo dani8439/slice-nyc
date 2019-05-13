@@ -28,8 +28,11 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find_by(id: params[:id])
+
+    raise params.inspect
     if @restaurant.update(restaurant_params)
-      redirect_to restaurant_path(@restaurant)
+      # redirect_to @restaurant
+      redirect_to restaurant_path
     else
       render :edit
     end
