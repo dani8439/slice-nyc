@@ -40,6 +40,8 @@ class RestaurantsController < ApplicationController
 
   private
 
+  # have to check about restaurant_pys -- restaurant_pies, issue in pluralization for model. Think it's throwing off other relationships.
+
   def restaurant_params
     params.require(:restaurant).permit(:name, :neighborhood, :borough, :seating, :oven, :multiple_locations, :category_id, pie_ids: [])
   end
