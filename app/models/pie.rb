@@ -9,27 +9,14 @@ class Pie < ApplicationRecord
   has_many :categories
   has_many :pie_ratings
   has_many :users, through: :pies_ratings
-  has_many :restaurant_pys
-  has_many :restaurants, through: :restaurant_pys
+  has_many :restaurant_pies
+  has_many :restaurants, through: :restaurant_pies
 
 
   validates :name, presence: true
   accepts_nested_attributes_for :toppings
   accepts_nested_attributes_for :cheeses
+  accepts_nested_attributes_for :restaurants
 
 
-
-  # def cheese_ids=(ids) -- saving blank for some reason?
-  #   ids.each do |id|
-  #     cheese = Cheese.find_by(id)
-  #     self.cheeses << cheese
-  #   end
-  # end
-
-  # def topping_ids=(ids)
-  #   ids.each do |id|
-  #     topping = Topping.find_by(id)
-  #     self.toppings << topping
-  #   end
-  # end
 end

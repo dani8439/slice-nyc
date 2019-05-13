@@ -5,6 +5,7 @@ class CreatePies < ActiveRecord::Migration[5.2]
       t.integer :category_id
       t.integer :crust_id
       t.integer :sauce_id
+      t.integer :restaurant_id 
 
       t.timestamps
     end
