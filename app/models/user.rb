@@ -1,9 +1,8 @@
 class User < ApplicationRecord
   has_many :pie_ratings
   has_many :pies, through: :pie_ratings
-  has_many :restaurants, through: :pie_ratings
-  # has_many :user_restaurants
-  # has_many :restaurants, through: :user_restaurants
+  has_many :user_restaurants
+  has_many :restaurants, through: :user_restaurants 
 
 
 

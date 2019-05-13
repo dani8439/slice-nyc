@@ -34,6 +34,11 @@
 
   </div>
 
+  <div>
+    
+      <%= f.label "Pie's Available" %>
+      <%= f.collection_select "name", Pie.all, :id, :name, {}, { multiple: true } %><br></br>
+  </div>
 
 
   <%= f.submit "Submit", class: "button btn-regular" %>
