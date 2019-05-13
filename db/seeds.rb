@@ -219,5 +219,5 @@ top111 = Topping.create(name: "Vegan sausage"),
 top112 = Topping.create(name: "White Anchovies"),
 top113 = Topping.create(name: "White Balsamic"),
 
-pie1 = Pie.create(name: "Plain", category_id: "9", cheese_id: "14", sauce_id: "13", crust_id: "2"),
-pie2 = Pie.create(name: "Vodka", category_id: "4", cheese_id: "20", sauce_id: "16", crust_id: "2", topping_id: "37")
+pie1 = Pie.create(name: "Plain", category_id: "9", cheese_ids: ["14"], sauce_id: "13", crust_id: "2", topping_ids: ["1"]),
+pie2 = Pie.create(name: "Vodka", category_id: "4", cheese_ids: ["20"], sauce_id: "16", crust_id: "2", topping_ids: ["37"])
