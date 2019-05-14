@@ -45,6 +45,6 @@ class PiesController < ApplicationController
   private
 
   def pie_params
-    params.require(:pie).permit(:name, :category_id, :sauce_id, :crust_id, cheese_ids: [], topping_ids: [])
+    params.require(:pie).permit(:name, :category_id, :sauce_id, :crust_id, cheese_ids: [], topping_ids: [], restaurant_ids: [])
   end
 end

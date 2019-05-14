@@ -1,5 +1,6 @@
 class Restaurant < ApplicationRecord
   belongs_to :category
+  
   has_many :user_restaurants
   has_many :users, through: :user_restaurants
   has_many :pie_restaurants

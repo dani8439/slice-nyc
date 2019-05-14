@@ -11,6 +11,12 @@
     <p><%= topping.name %></p>
   <% end %>
 
+  <h3>Available at: </h3>
+
+  <% @pie.restaurants.each do |restaurant| %>
+    <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+  <% end %>
+
 
   <h2><%= link_to "Edit this Pie", edit_py_path %></h2>
   <h2><%= link_to "Rate this Pie", pie_rating_path %></h2>

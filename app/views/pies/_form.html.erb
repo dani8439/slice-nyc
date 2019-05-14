@@ -24,8 +24,14 @@
 
       <p>Toppings (hold down CTRL to select more than one): <%= f.collection_select(:topping_ids, Topping.all, :id, :name, {}, { multiple: true }) %></p>
 
-    <p>Link to Restaurant/Review here?</p>
 
+  </div>
+
+  <div>
+    <p>Restaurants: <%= f.collection_select(:restaurant_ids, Restaurant.all, :id, :name, {}, { multiple: true })%></p>
+
+
+    <p>Link to Restaurant/Review here?</p>
   </div>
 
   <%= f.submit "Submit", class: "button btn-regular" %>

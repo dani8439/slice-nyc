@@ -1,16 +1,16 @@
 class Pie < ApplicationRecord
   belongs_to :crust
   belongs_to :sauce
+  belongs_to :category
 
   has_many :pie_cheeses
   has_many :cheeses, through: :pie_cheeses
   has_many :pie_toppings
   has_many :toppings, through: :pie_toppings
-  belongs_to :category
   has_many :pie_ratings
   has_many :users, through: :pies_ratings
   has_many :pie_restaurants
-  has_many :restaurants, through: :pie_restaurants 
+  has_many :restaurants, through: :pie_restaurants
 
 
   validates :name, presence: true
