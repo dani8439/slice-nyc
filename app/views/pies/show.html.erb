@@ -11,7 +11,7 @@
     <p><%= topping.name %></p>
   <% end %>
 
-  <h3>Available at: </h3>
+  <h2>Available at: </h2>
 
   <% @pie.restaurants.each do |restaurant| %>
     <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
