@@ -6,12 +6,11 @@ class Pie < ApplicationRecord
   has_many :cheeses, through: :pie_cheeses
   has_many :pie_toppings
   has_many :toppings, through: :pie_toppings
-  # has_many :categories
-  belongs_to :category 
+  belongs_to :category
   has_many :pie_ratings
   has_many :users, through: :pies_ratings
-  has_many :restaurant_pies
-  has_many :restaurants, through: :restaurant_pies
+  has_many :pie_restaurants
+  has_many :restaurants, through: :pie_restaurants 
 
 
   validates :name, presence: true

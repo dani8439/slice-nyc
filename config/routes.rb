@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :restaurant_pies
+  resources :pie_restaurants
   resources :pie_toppings
   resources :pie_cheeses
   resources :categories
