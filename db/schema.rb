@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 2019_05_14_151808) do
     t.string "oven"
     t.boolean "multiple_locations", default: false
     t.integer "category_id"
+    t.integer "pie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
