@@ -109,4 +109,11 @@ Models:
 
   nested route: rating within restaurant? Pie within category?
 
-  Users - can add restaurants, can add pies, can add sauces, cheeses, and toppings. Cannot add/edit/ or delete Categories. Can Rate their own pies in their own lists, and can delete their ratings. Can see other user's ratings. Cannot delete anyone elses information. 
+  Users - can add restaurants, can add pies, can add sauces, cheeses, and toppings. Cannot add/edit/ or delete Categories. Can Rate their own pies in their own lists, and can delete their ratings. Can see other user's ratings. Cannot delete anyone elses information.
+
+
+
+  ////
+  nested route - rating within a users_restaurants ?
+  fix association mismatch error in restaurants controller for pies.
+  update routes - cut out excess that is not needed. Talk to Kevin about not needing user to create a new cheese/sauce/crust/topping possibly? Something only for admin. If necessary.
