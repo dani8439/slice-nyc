@@ -95,7 +95,7 @@ restaurant36 = Restaurant.create(name: "Speedy Romeo" , neighborhood: "Clinton H
 restaurant37 = Restaurant.create(name: "Sottocasa", neighborhood: "Harlem", borough: "Manhattan", seating: "tables available", category_ids: ["8"], multiple_locations: "true"),
 restaurant38 = Restaurant.create(name: "Totonno's" , neighborhood: "Coney Island" , borough: "Brooklyn", seating: "tables available", category_ids: ["11"]),
 restaurant39 = Restaurant.create(name: "Una Pizza Napoletana", neighborhood: "Lower East Side", borough: "Manhattan", seating: "tables available", category_ids: ["8"]),
-restaurant40 = Restaurant.create(name: "Zero Otto Nove", neighborhood: "Belmont", borough: "Queens", seating: "tables available", category_ids: ["8"], multiple_locations: "true")
+restaurant40 = Restaurant.create(name: "Zero Otto Nove", neighborhood: "Belmont", borough: "Queens", seating: "tables available", category_ids: ["8"], multiple_locations: "true"),
 
 
 

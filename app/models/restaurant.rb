@@ -13,9 +13,9 @@ class Restaurant < ApplicationRecord
   validates :neighborhood, presence: true
   validates :borough, presence: true
   validates :seating, presence: true
-  validates :category_id, presence: true
+  # validates :category_ids, presence: true
 
   accepts_nested_attributes_for :pies
-  accepts_nested_attributes_for :categories 
+  accepts_nested_attributes_for :categories
 
 end
