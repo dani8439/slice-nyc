@@ -29,8 +29,8 @@
     <%= f.label :multiple_locations %><br>
     <%= f.check_box(:multiple_locations, {}, checked_value = "true", unchecked_value = "false") %><br>
 
-    <%= f.label :category_id %><br>
-    <%= f.collection_select :category_ids, Category.all, :id, :name %><br></br>
+    <%= f.label "Category (hold down CTRL to select more than one):" %>
+    <%= f.collection_select(:category_ids, Category.all, :id, :name, {}, { multiple: true }) %><br></br>
 
   </div>
 
