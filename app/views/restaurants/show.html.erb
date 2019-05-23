@@ -4,19 +4,19 @@
 
   <p>Location: <%= @restaurant.borough %>, <%= @restaurant.neighborhood %></p>
 
-  <p>Style Pizza: <%= @restaurant.categories.each do |cat| %></p>
-    <li><%= cat.name %></li>
+  <p>Style Pizza: <% @restaurant.categories.each do |cat| %></p>
+    <p><%= link_to cat.name, category_path %></p>
   <% end %>
 
   <% if @restaurant.oven? %>
-    <p>Made in a <%= @restaurant.oven %>.</p>
+    <p>Made in a <%= @restaurant.oven %> oven.</p>
   <% end %>
 
   <% if @restaurant.multiple_locations == true %>
     <p>More than one location.</p>
   <% end %>
 
-  <p><%= @restaurant.seating.capitalize %>.</p>
+  <p>Seating: <%= @restaurant.seating.capitalize %>.</p>
 
   <h2>Pies Available:</h2>
   <% @restaurant.pies.each do |pie| %>
