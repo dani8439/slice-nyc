@@ -15,11 +15,10 @@ Rails.application.routes.draw do
   resources :user_restaurants
 
 
-
-
-  # resources :categories do ??
-  #   resources :restaurants
+  # resources :user_restaurants do
+  #   resources :pie_ratings, only: [:create, :show, :edit, :destroy]
   # end
+
   resources :users, only: [:create, :show]
 
   get '/signup', :to => 'users#new'
