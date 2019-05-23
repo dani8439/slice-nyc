@@ -65,7 +65,7 @@ crust6 = Crust.create(name: "Whole Wheat"),
 
 
 restaurant1 = Restaurant.create(name: "Adelina's", neighborhood: "Greenpoint", borough: "Brooklyn", seating: "tables available", category_ids: ["14"]),
-restaurant2 = Restaurant.create(name: "Amore Pizzeria", nieghborhood: "Flushing", borough: "Queens", seating: "tables available", category_ids: ["12"]),
+restaurant2 = Restaurant.create(name: "Amore Pizzeria", neighborhood: "Flushing", borough: "Queens", seating: "tables available", category_ids: ["12"]),
 restaurant3 = Restaurant.create(name: "Antika", neighborhood: "Astoria", borough: "Queens", seating: "tables available", category_ids: ["7"]),
 restaurant4 = Restaurant.create(name: "Archie's Bar & Pizza", neighborhood: "Bushwick", borough: "Broolyn", seating: "bar", category_ids: ["8"])
 restaurant5 = Restaurant.create(name: "Barboncino", neighborhood: "Crown Heights", borough: "Brooklyn", seating: "tables available", category_ids: ["10"], oven: "Wood fire"),

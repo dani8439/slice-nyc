@@ -4,7 +4,9 @@
 
   <p>Location: <%= @restaurant.borough %>, <%= @restaurant.neighborhood %></p>
 
-  <p>Style Pizza: <%= @restaurant.category.name %></p>
+  <p>Style Pizza: <%= @restaurant.categories.each do |cat| %></p>
+    <li><%= cat.name %></li>
+  <% end %>
 
   <% if @restaurant.oven? %>
     <p>Made in a <%= @restaurant.oven %>.</p>
