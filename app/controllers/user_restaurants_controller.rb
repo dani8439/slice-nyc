@@ -5,6 +5,13 @@ class UserRestaurantsController < ApplicationController
   end
 
   def create
+    @user_restaurant = UserRestaurant.create(user_restaurant_params)
+
+    if @user_restaurant.save
+      redirect_to @user_restaurant
+    else
+      render :new
+    end
   end
 
   def edit
@@ -12,4 +19,12 @@ class UserRestaurantsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def user_restaurant_params
+    params.require(:user_restaurant).permit(:user_id, :restaurant_id)
+  end
+
+
 end
