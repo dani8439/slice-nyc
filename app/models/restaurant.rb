@@ -5,8 +5,8 @@ class Restaurant < ApplicationRecord
   has_many :users, through: :user_restaurants
   has_many :pie_restaurants
   has_many :pies, through: :pie_restaurants, :source => :pie
-  has_many :restaurant_categories
-  has_many :categories, through: :restaurant_categories, :source => :category
+  # has_many :restaurant_categories
+  # has_many :categories, through: :restaurant_categories, :source => :category
 
 
   validates :name, presence: true
@@ -15,7 +15,7 @@ class Restaurant < ApplicationRecord
   validates :seating, presence: true
 
   accepts_nested_attributes_for :pies
-  accepts_nested_attributes_for :categories
+  # accepts_nested_attributes_for :categories
 
 
   #Rack::QueryParser::ParameterTypeError (expected Array (got String) for param `name'): ?? This why restaurant isn't being saved? What's happening here?
