@@ -14,6 +14,7 @@ class Pie < ApplicationRecord
 
 
   validates :name, presence: true
+  
   accepts_nested_attributes_for :toppings
   accepts_nested_attributes_for :cheeses
   accepts_nested_attributes_for :restaurants

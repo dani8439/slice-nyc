@@ -6,7 +6,7 @@ class Restaurant < ApplicationRecord
   has_many :pie_restaurants
   has_many :pies, through: :pie_restaurants, :source => :pie
   has_many :restaurant_categories
-  has_many :categories, through: :restaurant_categories #, :source => :category
+  has_many :categories, through: :restaurant_categories, :source => :category
 
 
   validates :name, presence: true
