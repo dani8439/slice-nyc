@@ -8,7 +8,7 @@
 
 
 cat1 = Category.create(name: "Bar", crust: "thin", cheese: "mozzarella", shape: "round", additional_comments: "This type of pizza is not expecially prolific in the city, at least compared to slice joints. It is most often cooked in gas ovens in the back kitchens of bars."),
-cat2 = Category.create(name: "Cajun", crust: "thin", cheese: "varies", shape: "round", additional_comments: "Cajun pizza is a NYC creation couretsy of the Two Boots chain. It is a fusion of Lousiana and Italy, but is something uniquely New York. It is a conrmeal crust, a spicy tomato sauce, and unexpected toppings (crayfish?).")
+cat2 = Category.create(name: "Cajun", crust: "thin", cheese: "varies", shape: "round", additional_comments: "Cajun pizza is a NYC creation courtesy of the Two Boots chain. It is a fusion of Lousiana and Italy, but is something uniquely New York. It is a cornmeal crust, a spicy tomato sauce, and unexpected toppings (crayfish anyone?).")
 cat3 = Category.create(name: "California/Flatbread/Chef/Gourmet Style", crust: "thin", cheese: "optional", shape: "round"),
 cat4 = Category.create(name: "Chicago-Style/Deep Dish", crust: "Deep-dish", cheese: "mozzarella", shape: "round", pan: "oiled steel pan"),
 cat5 = Category.create(name: "Chicago Thin Crust/Midwestern", crust: "thin", cheese: "mozzarella", shape: "round", additional_comments: "It is generally cut into squares rather than wedges, which is referred to as a tavern cut or party cut."),
