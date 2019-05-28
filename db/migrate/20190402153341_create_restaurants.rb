@@ -6,7 +6,6 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :borough
       t.string :seating
       t.string :oven
-      # t.integer :category_id
       t.boolean :multiple_locations, :default => false
 
       t.timestamps

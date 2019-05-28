@@ -5,7 +5,7 @@
   <p>Location: <%= @restaurant.borough %>, <%= @restaurant.neighborhood %></p>
 
   <p>Style Pizza: <% @restaurant.categories.each do |cat| %></p>
-    <p><%= link_to cat.name, category_path %></p>
+    <p><%= link_to cat.name, category_path(cat.id) %></p>
   <% end %>
 
   <% if @restaurant.oven? %>
@@ -23,8 +23,8 @@
     <p><%= pie.name %></p>
   <% end %>
 
-  <h4><%= link_to "Edit this Restaurant", edit_restaurant_path %></h4>
-  <h4><%= link_to "Write a review", user_restaurant_path(@restaurant.id)%></h4>
+  <h4><%= link_to "Edit this Restaurant", edit_restaurant_path if logged_in? %></h4>
+  <h4><%= link_to "Write a review", user_restaurant_path(@restaurant.id) if logged_in? %></h4>
 
 
 </div>

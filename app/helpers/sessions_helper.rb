@@ -14,10 +14,10 @@ module SessionsHelper
     !!current_user
   end
 
-  def require_login
+  def require_login  #is this necessary, have it in applicationcontroller too??
     unless logged_in?
-      flash[:alert] = "Login is required"
+      flash[:alert] = "You must be logged in to do that!"
       redirect_to login_path
-    end 
+    end
   end
 end

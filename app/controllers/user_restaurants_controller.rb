@@ -1,4 +1,5 @@
 class UserRestaurantsController < ApplicationController
+  before_action :require_login
 
   def show
     @user_restaurant = UserRestaurant.find_by(id: params[:id])

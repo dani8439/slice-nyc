@@ -1,7 +1,6 @@
 <div class="category">
   <h1><%= @category.name %> Pizza </h1>
 
-  <!-- Error Here -- need to fix -->
   <div class="category_content">
     <% @category.restaurants.each do |rest| %>
       <p><%= link_to rest.name, restaurant_path(rest.id) %> - <%= rest.neighborhood %>, <%= rest.borough %></p>
