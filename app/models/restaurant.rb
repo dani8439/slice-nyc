@@ -17,14 +17,8 @@ class Restaurant < ApplicationRecord
   validates :seating, presence: true
 
   accepts_nested_attributes_for :pies
-  accepts_nested_attributes_for :categories #before_save here?
+  accepts_nested_attributes_for :categories 
 
-  # def category_ids=(ids)
-  #   ids.each do |id|
-  #     category = Category.find_by(id)
-  #     self.categories << category
-  #   end
-  # end
 
 
 end

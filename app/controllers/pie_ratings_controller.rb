@@ -22,9 +22,10 @@ class PieRatingsController < ApplicationController
   end
 
   def edit
-  end 
+  end
 
   def show
+    @pie_rating = PieRating.find_by(id: params[:id])
   end
 
   private

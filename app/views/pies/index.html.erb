@@ -1,7 +1,7 @@
 <div class="pies">
   <h1>Pies</h1>
-  <% @pies.each do |p| %>
-    <h3><%= link_to p.name, py_path(p.id) %></h3>
+  <% Pie.all.sort_by(&:name).each do |p| %>
+    <h3><%= link_to p.name, py_path(p.id)%> - <%= p.category.name %></h3>
   <% end %>
 
   <br></br>
