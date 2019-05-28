@@ -1,0 +1,24 @@
+<div class="pie_ratings">
+  <h1>New Review</h1>
+
+  <%= form_for [@pie_rating] do |f| %>
+    <div>
+      <%= f.label :pie_id %>
+      <%= f.collection_select(:pie_id, Pie.all, :id, :name) %>
+    </div>
+    <div>
+      <h4>Restaurant Goes Here</h4>
+    </div>
+    <div>
+      <%= f.label :taste_score %>
+      <%= f.select :taste_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %>
+    </div>
+    <br><br>
+    <div>
+      <%= f.label :comments %>
+      <%= f.text_area :comments %>
+    </div>
+    <%= f.submit "Submit", class: "button btn-regular" %>
+  <% end %>
+
+</div>
