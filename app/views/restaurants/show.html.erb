@@ -23,8 +23,9 @@
     <p><%= pie.name %></p>
   <% end %>
 
-  <h4><%= link_to "Edit this Restaurant", edit_restaurant_path if logged_in? %></h4>
-  <h4><%= link_to "Write a review", user_restaurant_path(@restaurant.id) if logged_in? %></h4>
-
+  <% if logged_in? %>
+    <h3><%= link_to "Edit this Restaurant", edit_restaurant_path %></h3>
+    <h3><%= link_to "Write a review", user_restaurant_path(@restaurant.id) %></h3>
+  <% end %>
 
 </div>

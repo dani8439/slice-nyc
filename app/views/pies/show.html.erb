@@ -17,8 +17,11 @@
     <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
   <% end %>
 
+  <br></br>
 
-  <h2><%= link_to "Edit this Pie", edit_py_path if logged_in? %></h2>
-  <h2><%= link_to "Rate this Pie", pie_rating_path if logged_in? %></h2>
+  <% if logged_in? %>
+    <h3><%= link_to "Edit this Pie", edit_py_path %></h3>
+    <h3><%= link_to "Rate this Pie", pie_rating_path %></h3>
+  <% end %>
 
 </div>
