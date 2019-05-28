@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_05_16_171411) do
     t.string "comments"
     t.integer "pie_id"
     t.integer "user_id"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

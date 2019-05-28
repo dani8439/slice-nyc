@@ -5,6 +5,7 @@ class CreatePieRatings < ActiveRecord::Migration[5.2]
       t.string :comments
       t.integer :pie_id
       t.integer :user_id
+      t.integer :restaurant_id
 
       t.timestamps
     end

@@ -1,11 +1,14 @@
 class Restaurant < ApplicationRecord
 
-  has_many :user_restaurants
-  has_many :users, through: :user_restaurants
-  has_many :pie_restaurants
-  has_many :pies, through: :pie_restaurants, :source => :pie
+  # has_many :user_restaurants
+  # has_many :users, through: :user_restaurants
+  # has_many :pie_restaurants
+  # has_many :pies, through: :pie_restaurants, :source => :pie
   has_many :restaurant_categories
   has_many :categories, through: :restaurant_categories, :source => :category
+  has_many :pie_ratings
+  has_many :pies, through: :pie_ratings, :source => :pie
+  has_many :users, through: :pie_ratings
 
 
   validates :name, presence: true

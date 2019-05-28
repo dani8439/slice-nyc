@@ -1,6 +1,7 @@
 class PieRating < ApplicationRecord
   belongs_to :pie
   belongs_to :user
+  belongs_to :restaurant 
 
 
 
