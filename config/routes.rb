@@ -10,14 +10,17 @@ Rails.application.routes.draw do
   resources :crusts, only: [:index, :create, :show, :edit, :destroy]
   resources :pies
   # resources :pie_ratings
-  resources :restaurants
+  # resources :restaurants
   resources :sauces, only: [:index, :create, :show, :edit, :destroy]
   resources :toppings, only: [:index, :create, :show, :edit, :destroy]
 
-
-  resources :restaurant_ratings do
-    resources :pie_ratings, only: [:index, :create, :show, :edit, :destroy]
+  resources :restaurants do
+    resources :restaurant_ratings, only: [:index, :create, :show, :edit, :destroy]
   end
+
+  # resources :restaurant_ratings do
+  #   resources :pie_ratings, only: [:index, :create, :show, :edit, :destroy]
+  # end
 
   # resources :restaurants do
   #   resources :pie_ratings, only: [:index, :create, :show, :edit, :destroy]

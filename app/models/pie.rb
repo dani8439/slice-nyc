@@ -1,8 +1,7 @@
 class Pie < ApplicationRecord
   belongs_to :crust
   belongs_to :sauce
-  belongs_to :category
-  belongs_to :pie_rating 
+  belongs_to :category 
 
   has_many :pie_cheeses
   has_many :cheeses, through: :pie_cheeses
