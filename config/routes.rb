@@ -5,18 +5,18 @@ Rails.application.routes.draw do
   resources :pie_toppings
   resources :pie_cheeses
   resources :categories
-  resources :cheeses, only: [:index]
-  resources :crusts, only: [:index]
+  resources :cheeses, only: [:index, :create, :show, :edit, :destroy]
+  resources :crusts, only: [:index, :create, :show, :edit, :destroy]
   resources :pies
   # resources :pie_ratings
   # resources :restaurants
-  resources :sauces, only: [:index]
-  resources :toppings, only: [:index]
+  resources :sauces, only: [:index, :create, :show, :edit, :destroy]
+  resources :toppings, only: [:index, :create, :show, :edit, :destroy]
   resources :user_restaurants
 
 
   resources :restaurants do
-    resources :pie_ratings, only: [:create, :show, :edit, :destroy]
+    resources :pie_ratings, only: [:index, :create, :show, :edit, :destroy]
   end
 
   resources :users, only: [:create, :show]
