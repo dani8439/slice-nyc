@@ -18,6 +18,17 @@
           <a class="logo" href="<%= root_url %>">SliceNYC</a>
           <nav>
             <ul>
+              <div class="dropdown">
+                <button class="dropbtn">Pie Options
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <li><%= link_to "Cheeses", cheeses_path %></li>
+                  <li><%= link_to "Crusts", crusts_path %></li>
+                  <li><%= link_to "Sauces", sauces_path %></li>
+                  <li><%= link_to "Toppings", toppings_path %></li>
+                </div>
+              </div>
               <li><%= link_to "Pies", pies_path%></li>
               <li><%= link_to "Restaurants", restaurants_path %></li>
               <% if logged_in? %>
