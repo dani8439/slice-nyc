@@ -10,6 +10,7 @@ class PieRatingsController < ApplicationController
     # @pie_rating = @user.pie_ratings.build
   end
 
+  # method needs to be amended now that restaurant_rating and pie_rating have been joined..
   def create
     @user = current_user
     @pie_rating = @user.pie_ratings.build(pie_rating_params)
