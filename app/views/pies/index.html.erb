@@ -1,4 +1,4 @@
-<div class="pies">
+<div class="center-align">
   <h1>Pies</h1>
   <% Pie.all.sort_by(&:name).each do |p| %>
     <h3><%= link_to p.name, py_path(p.id)%> - <%= p.category.name %></h3>
