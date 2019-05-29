@@ -259,12 +259,12 @@ top117 = Topping.create(name: "Vegan sausage"),
 top118 = Topping.create(name: "White Anchovies"),
 top119 = Topping.create(name: "White Balsamic"),
 
-pie1 = Pie.create(name: "Clam", category_id: "18", cheese_ids: ["1"], sauce_id: "8", crust_id: "4", topping_ids: ["29", "36", "42", "69"], restaurant_ids: ["10", ""]),
+pie1 = Pie.create(name: "Clam", category_id: "18", cheese_ids: ["1"], sauce_id: "8", crust_id: "4", topping_ids: ["29", "36", "42", "69"], restaurant_ids: ["10"]),
 pie2 = Pie.create(name: "Garbage", category_id: "10", cheese_ids: "17", sauce_id: "14", crust_id: "4", topping_ids: ["93", "61", "66", "63", "43"], restaurant_ids: ["10"])
 pie3 = Pie.create(name: "Margherita", category_id: "13", cheese_ids: ["11"], sauce_id: "7", crust_id: "1", topping_ids: ["40"], restaurant_ids: ["10", "22"]),
 pie4 = Pie.create(name: "Meatball", category_id: "10", cheese_ids: ["10", "21"], sauce_id: "14", crust_id: "4", topping_ids: ["61", "40"], restaurant_ids: ["28"]),
 pie5 = Pie.create(name: "Pepperoni", category_id: "12", cheese_ids: ["17"], sauce_id: "14", crust_id: "4", topping_ids: ["73"], restaurant_ids: ["18", "42"]),
 pie6 = Pie.create(name: "Pepperoni", category_id: "6", cheese_ids: ["17", "20"], sauce_id: "14", crust_id: "4", topping_ids: ["73", "40"], restaurant_ids: ["25"]),
-pie7 = Pie.create(name: "Plain", category_id: "12", cheese_ids: ["17"], sauce_id: "14", crust_id: "4", topping_ids: ["1"], restaurant_ids: ["6", "19", "29", "42"]),
+pie7 = Pie.create(name: "Plain", category_id: "12", cheese_ids: ["17"], sauce_id: "14", crust_id: "4", topping_ids: ["1"], restaurant_ids: ["6", "18", "29", "42"]),
 pie8 = Pie.create(name: "Vodka", category_id: "6", cheese_ids: ["24"], sauce_id: "17", crust_id: "4", topping_ids: ["40"], restaurant_ids: ["25"]),
 pie9 = Pie.create(name: "White", category_id: "10", cheese_ids: ["11", "24", "21"], sauce_id: "8", crust_id: "4", topping_ids: ["43", "40"], restaurant_ids: ["22"])
