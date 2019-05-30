@@ -17,8 +17,9 @@ Rails.application.routes.draw do
   #   resources :restaurant_ratings
   # end
 
+
   resources :restaurant_ratings do
-    resources :pie_ratings 
+    resources :pie_ratings
   end
 
 

@@ -12,6 +12,7 @@ class RestaurantRatingsController < ApplicationController
   end
 
   def new
+    # error in here, cannot access @restaurant.name, why? Something in relationship models? 
     # raise params.inspect
 
     @restaurant = Restaurant.find_by(id: params[:id])
