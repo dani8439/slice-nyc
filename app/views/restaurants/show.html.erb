@@ -20,7 +20,7 @@
 
   <h2>Pies Available:</h2>
   <% @restaurant.pies.each do |pie| %>
-    <p><%= pie.name %></p>
+    <p><%= link_to pie.name, py_path(pie.id) %></p>
   <% end %>
 
   <% if logged_in? %>

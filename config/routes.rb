@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :cheeses, only: [:index, :create, :show, :edit, :destroy]
   resources :crusts, only: [:index, :create, :show, :edit, :destroy]
   resources :pies
-  # resources :pie_ratings
+  resources :pie_ratings
   # resources :restaurants
   resources :sauces, only: [:index, :create, :show, :edit, :destroy]
   resources :toppings, only: [:index, :create, :show, :edit, :destroy]
