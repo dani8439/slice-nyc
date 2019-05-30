@@ -15,9 +15,8 @@ class RestaurantRatingsController < ApplicationController
     # raise params.inspect
 
     @restaurant = Restaurant.find_by(id: params[:id])
-    @restaurants = Restaurant.all
     @pies = Pie.all
-    @restaurant_rating = RestaurantRating.new 
+    @restaurant_rating = RestaurantRating.new
     # @restaurant_rating = @user.restaurant_ratings.build
   end
 
