@@ -4,6 +4,10 @@ class PieRatingsController < ApplicationController
   def index
   end
 
+  def show
+    @pie_rating = PieRating.find_by(id: params[:id])
+  end
+
   def new
     @restaurant = Restaurant.all
     @pie_rating = PieRating.new
@@ -25,9 +29,6 @@ class PieRatingsController < ApplicationController
   def edit
   end
 
-  def show
-    @pie_rating = PieRating.find_by(id: params[:id])
-  end
 
   private
   def pie_rating_params
