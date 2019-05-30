@@ -9,8 +9,8 @@ class PieRatingsController < ApplicationController
   end
 
   def new
-    @restaurant = Restaurant.all
-    @pie_rating = PieRating.new
+    @restaurant = Restaurant.find_by(id: params[:id])
+    @pie_rating = PieRating.new(:restaurant => @restaurant)
     # @pie_rating = @user.pie_ratings.build
   end
 
