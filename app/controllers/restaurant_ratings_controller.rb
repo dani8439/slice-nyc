@@ -15,6 +15,7 @@ class RestaurantRatingsController < ApplicationController
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @restaurant_rating = RestaurantRating.new
+    @pies = @restaurant.pies 
     # @restaurant_rating = @user.restaurant_ratings.build
   end
 

@@ -16,6 +16,15 @@
       <%= f.text_area :comments %>
 
     </div>
+
+    <div>
+      <h3>What Pies did you Eat?</h3>
+      <% @pies.each do |pie| %>
+        <p><%= link_to pie.name, py_path(pie.id) %></p>
+      <% end %>
+
+
+    </div>
     <%= f.submit "Submit", class: "button btn-regular" %>
   <% end %>
 
