@@ -1,4 +1,16 @@
 <div>
-  <h1>Write a review for <% %> </h1>
+  <h1>Write a review for <%= @restaurant.name %>: </h1>
+
+  <%= form_for [@restaurant, @restaurant_rating] do |f| %>
+    <div>
+      <%= f.label :rating %>
+      <%= f.select :rating, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
+
+      <%= f.label :comments %>
+      <%= f.text_area :comments %>
+
+    </div>
+    <%= f.submit "Submit", class: "button btn-regular" %>
+  <% end %>
 
 </div>

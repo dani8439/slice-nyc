@@ -4,6 +4,7 @@ class RestaurantRatingsController < ApplicationController
 
   def index
     @restaurant_ratings = RestaurantRating.all
+    # @restaurant_ratings = RestaurantRating.where("restaurant_id =?", params[:restaurant_id])
 
   end
 
@@ -12,16 +13,13 @@ class RestaurantRatingsController < ApplicationController
   end
 
   def new
-
-    # raise params.inspect
-
-    @restaurant = Restaurant.find_by(id: params[:id])
-    @pies = Pie.all
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @restaurant_rating = RestaurantRating.new
     # @restaurant_rating = @user.restaurant_ratings.build
   end
 
   def create
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @restaurant_rating = @user.restaurant_ratings.build(restaurant_rating_params)
 
     if @restaurant_rating.save
