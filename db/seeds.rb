@@ -283,5 +283,5 @@ pie22 = Pie.create(name: "Square", category_id: "10", cheese_ids: ["11"], sauce_
 pie23 = Pie.create(name: "St. Louie", category_id: "10", cheese_ids: ["22"], sauce_id: "10", crust_id: "7", topping_ids: ["94", "74", "78"], restaurant_ids: ["44"]),
 pie24 = Pie.create(name: "Tomato", category_id: "7", cheese_ids: ["21", "14"], sauce_id: "13", crust_id: "1", topping_ids: ["44", "69"], restaurant_ids: ["9"]),
 pie25 = Pie.create(name: "Vodka", category_id: "6", cheese_ids: ["24"], sauce_id: "16", crust_id: "4", topping_ids: ["41"], restaurant_ids: ["25"]),
-pie26 = Pie.create(name: "White", category_id: "7", cheese_ids: ["17", "24", "14", "21"], sauce: "7", crust_id: "4", topping_ids: ["15"], restaurant_ids: ["9"]),
+pie26 = Pie.create(name: "White", category_id: "7", cheese_ids: ["17", "24", "14", "21"], sauce_id: "7", crust_id: "4", topping_ids: ["15"], restaurant_ids: ["9"]),
 pie27 = Pie.create(name: "White", category_id: "10", cheese_ids: ["11", "23", "20"], sauce_id: "7", crust_id: "4", topping_ids: ["44", "41"], restaurant_ids: ["14", "22", "29"])
