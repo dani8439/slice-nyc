@@ -13,14 +13,14 @@ Rails.application.routes.draw do
   resources :sauces, only: [:index]
   resources :toppings, only: [:index]
 
-  # resources :restaurants do
-  #   resources :restaurant_ratings
-  # end
-
-
-  resources :restaurant_ratings do
-    resources :pie_ratings
+  resources :restaurants do
+    resources :restaurant_ratings
   end
+
+
+  # resources :restaurant_ratings do
+  #   resources :pie_ratings
+  # end
 
 
   resources :users, only: [:create, :show]

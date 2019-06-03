@@ -33,9 +33,6 @@
     <%= f.label "Category (hold down CTRL to select more than one):" %>
     <%= f.collection_select(:category_ids, Category.all, :id, :name, {}, { multiple: true }) %><br>
 
-    <%= f.label "Pies (hold down CTRL to select more than one):" %>
-    <%= f.collection_select(:pie_ids, Pie.all.sort_by(&:name), :id, :name, {}, { multiple: true }) %><br></br>
-
   </div>
 
 

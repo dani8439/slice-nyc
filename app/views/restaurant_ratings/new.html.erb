@@ -1,14 +1,4 @@
 <div>
-  <h1>Write a review for <% "This is causing an error, cannot get restaurant name" %> </h1>
+  <h1>Write a review for <% %> </h1>
 
-  <%= form_for [@restaurant_rating] do |f| %>
-    <div>
-      <%= f.label :rating %>
-      <%= f.select :rating, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]]%><br></br>
-
-      <%= f.label :comments %>
-      <%= f.text_area :comments %>
-
-    </div>
-  <% end %>
 </div>
