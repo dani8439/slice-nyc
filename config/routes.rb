@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  # resources :restaurants
+
   resources :restaurant_categories
   resources :pie_restaurants
   resources :pie_toppings
@@ -14,13 +14,8 @@ Rails.application.routes.draw do
   resources :toppings, only: [:index]
 
   resources :restaurants, only: [:new, :index, :edit, :create, :show] do
-    resources :restaurant_ratings, only: [:new, :create]
+    resources :restaurant_ratings, only: [:new, :create, :edit, :destroy, :show]
   end
-
-
-  # resources :restaurant_ratings do
-  #   resources :pie_ratings
-  # end
 
 
   resources :users, only: [:create, :show]

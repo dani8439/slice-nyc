@@ -26,7 +26,6 @@
   <% if logged_in? %>
     <h3><%= link_to "Edit this Restaurant", edit_restaurant_path %></h3>
     <h3><%= link_to "Write a review", new_restaurant_restaurant_rating_path(@restaurant.id) %></h3>
-    This is causing an error in routes, and it is showing oddly restaurant_rating/new.1? Why?
   <% end %>
 
 </div>

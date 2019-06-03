@@ -3,10 +3,16 @@
 
   <%= form_for [@restaurant, @restaurant_rating] do |f| %>
     <div>
-      <%= f.label :rating %>
-      <%= f.select :rating, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
+      <%= f.label "How was the atmosphere?" %>
+      <%= f.select :atmosphere_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
 
-      <%= f.label :comments %>
+      <%= f.label "How was the service?" %>
+      <%= f.select :service_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
+
+      <%= f.label "How was the food?" %>
+      <%= f.select :food_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
+
+      <%= f.label "What would you say about the restaurant itself?" %>
       <%= f.text_area :comments %>
 
     </div>

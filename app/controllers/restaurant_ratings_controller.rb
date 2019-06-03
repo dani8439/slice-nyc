@@ -22,6 +22,8 @@ class RestaurantRatingsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @restaurant_rating = @user.restaurant_ratings.build(restaurant_rating_params)
 
+    raise params.inspect
+
     if @restaurant_rating.save
       redirect_to restaurant_rating_path(@restaurant_rating)
     else
@@ -39,7 +41,7 @@ class RestaurantRatingsController < ApplicationController
   private
 
   def restaurant_rating_params
-    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :rating, :comments, pie_rating_ids: [])
+    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :taste_score, :service_score, :atmosphere_score, :comments, pie_rating_ids: [])
   end
 
   def set_current_user
