@@ -30,4 +30,7 @@ What Pies did you eat? (& a rating?)
 
 
 To do:
-Update seed data to add more pies to restaurants for this to work? 
+Update seed data to add more pies to restaurants for this to work?
+
+
+- Emmy Squared 
