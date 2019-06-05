@@ -6,11 +6,13 @@ User can access database of Restaurants. Can add a restaurant if it is not alrea
 
 User can choose from category of Pizza Type (Neapolitan, NY-Style, etc)
 
-User can add pies to database.
+User can add pies to database, and edit/update them. Can they delete? Don't want them deleting record from everyone.
 
-User can filter Restaurants by neighborhood and borough?
+User can add restaurants to database, edit and update them. Cannot delete them.
 
-User can rate restaurant & pies?
+User can rate restaurant & add pies to restaurant review that they've eaten. NO REVIEW of individual pies. Not necessary.
+
+User can then filter what restaurants they have rated, and see those ratings. 
 
 
 
@@ -23,14 +25,11 @@ Restaurant Review:
 
 Then choose from an existing list of pizza's offered:
 
-What Pies did you eat? (& a rating?)
+What Pies did you eat? Rating of pie is under restaurant review.
 
 - Plain Pie
 - Pepperoni Pie etc.
 
+Reach goals:
 
-To do:
-Update seed data to add more pies to restaurants for this to work?
-
-
-- Emmy Squared 
+User can filter Restaurants by neighborhood and borough -- EXTRA REACH, not necessary to fulfill project requirements.
