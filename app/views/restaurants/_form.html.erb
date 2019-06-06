@@ -32,7 +32,6 @@
 
     <%= f.label "Category (hold down CTRL to select more than one):" %>
     <%= f.collection_select(:category_ids, Category.all, :id, :name, {}, { multiple: true }) %><br>
-
   </div>
 
 

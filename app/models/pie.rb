@@ -7,10 +7,6 @@ class Pie < ApplicationRecord
   has_many :cheeses, through: :pie_cheeses
   has_many :pie_toppings
   has_many :toppings, through: :pie_toppings
-  has_many :pie_ratings
-  has_many :restaurant_ratings, through: :pie_ratings
-  # has_many :users, through: :pie_ratings
-  # has_many :restaurants, through: :pie_ratings
   has_many :pie_restaurants
   has_many :restaurants, through: :pie_restaurants, :source => :restaurant
 

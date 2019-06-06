@@ -1,10 +1,6 @@
 class User < ApplicationRecord
-  # has_many :pie_ratings
-  # has_many :pies, through: :pie_ratings, :source => :pie
   has_many :restaurant_ratings
   has_many :restaurants, through: :restaurant_ratings
-  has_many :pies, through: :pie_ratings
-
 
 
   has_secure_password
@@ -13,7 +9,6 @@ class User < ApplicationRecord
   validates :username, presence: true
   validates :email, presence: true, uniqueness: true
 
-  # Article How to Use Omniauth to Authenticate Your Users.
 
   def self.find_or_create_by_omniauth(auth_hash)
     self.where(email: auth_hash["info"]["email"]).first_or_create do |user|
