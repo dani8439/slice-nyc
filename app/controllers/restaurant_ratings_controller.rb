@@ -15,7 +15,7 @@ class RestaurantRatingsController < ApplicationController
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @restaurant_rating = RestaurantRating.new
-    @pies = @restaurant.pies 
+    @pies = @restaurant.pies
     # @restaurant_rating = @user.restaurant_ratings.build
   end
 
@@ -23,10 +23,10 @@ class RestaurantRatingsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @restaurant_rating = @user.restaurant_ratings.build(restaurant_rating_params)
 
-    raise params.inspect
-
+    # NoMethodError for 'rating' why??
     if @restaurant_rating.save
-      redirect_to restaurant_rating_path(@restaurant_rating)
+      redirect_to restaurant_restaurant_rating_path(@restaurant_rating)
+      # (@restaurant, @restaurant_rating)??
     else
       render :new
     end
@@ -42,7 +42,7 @@ class RestaurantRatingsController < ApplicationController
   private
 
   def restaurant_rating_params
-    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :taste_score, :service_score, :atmosphere_score, :comments, pie_rating_ids: [])
+    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :food_score, :service_score, :atmosphere_score, :comments, pie_rating_ids: [])
   end
 
   def set_current_user
