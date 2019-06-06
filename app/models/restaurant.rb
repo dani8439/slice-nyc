@@ -15,7 +15,7 @@ class Restaurant < ApplicationRecord
   validates :seating, presence: true
 
 
-  accepts_nested_attributes_for :pies 
+  accepts_nested_attributes_for :pies
   accepts_nested_attributes_for :categories
 
 

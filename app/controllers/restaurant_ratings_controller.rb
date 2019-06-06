@@ -21,7 +21,10 @@ class RestaurantRatingsController < ApplicationController
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
-    @restaurant_rating = @user.restaurant_ratings.build(restaurant_rating_params)
+    # @restaurant_rating = @user.restaurant_ratings.build(restaurant_rating_params)
+    @restaurant_rating = @restaurant.restaurant_ratings.build(restaurant_rating_params) # -- won't load user_id
+
+    # not saving retaurant_id into instance variable. causing the error??
 
     # NoMethodError for 'rating' why??
     if @restaurant_rating.save
@@ -42,7 +45,7 @@ class RestaurantRatingsController < ApplicationController
   private
 
   def restaurant_rating_params
-    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :food_score, :service_score, :atmosphere_score, :comments, pie_rating_ids: [])
+    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :food_score, :service_score, :atmosphere_score, :comments)
   end
 
   def set_current_user
