@@ -1,8 +1,8 @@
 <div class="center-align">
-  <h1>ZOMG That's a whole lotta Pizza!!</h1>
+  <h1>Your Reviews</h1>
 
-  <%= @restaurant_ratings.each do |rest| %>
-    <h2><%=  %></h2>
+  <% @restaurant_ratings.each do |rest| %>
+    <h2><%= link_to rest.restaurant.name %></h2>
   <% end %>
 
 </div>
