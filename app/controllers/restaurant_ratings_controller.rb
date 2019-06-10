@@ -9,18 +9,19 @@ class RestaurantRatingsController < ApplicationController
   end
 
   def show
+    find_restaurant
     @restaurant_rating = RestaurantRating.find_by(id: params[:id])
   end
 
   def new
-    @restaurant = Restaurant.find(params[:restaurant_id])
+    find_restaurant
     @restaurant_rating = @user.restaurant_ratings.build
     @pies = @restaurant.pies
 
   end
 
   def create
-    @restaurant = Restaurant.find(params[:restaurant_id])
+    find_restaurant
     @restaurant_rating = @user.restaurant_ratings.build(restaurant_rating_params)
     @restaurant_rating.restaurant_id = params[:restaurant_id] if params[:restaurant_id]
 
@@ -33,15 +34,17 @@ class RestaurantRatingsController < ApplicationController
   end
 
   def edit
+    find_restaurant
     @restaurant_rating = RestaurantRating.find_by(id: params[:id])
+    @pies = @restaurant.pies
   end
 
   def update
-    @restaurant = Restaurant.find(params[:restaurant_id])
+    find_restaurant
     @restaurant_rating = RestaurantRating.find_by(id: params[:id])
 
     if @restaurant_rating.update(restaurant_rating_params)
-      redirect_to restaurant_restaurant_rating_path(@restaurant_rating)
+      redirect_to restaurant_restaurant_rating_path(@restaurant, @restaurant_rating)
     else
       @pies = @restaurant.pies
       render :edit
@@ -57,5 +60,9 @@ class RestaurantRatingsController < ApplicationController
 
   def set_current_user
     @user = current_user
+  end
+
+  def find_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 end
