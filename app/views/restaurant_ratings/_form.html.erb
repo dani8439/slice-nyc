@@ -20,13 +20,13 @@
     <%= f.label "How was the food?" %>
     <%= f.select :food_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
 
-    <%= f.label "What would you say about the restaurant itself?" %>
+    <%= f.label "Comments?" %>
     <%= f.text_area :comments %>
 
   </div>
 
   <div>
-    <h3>What Pies did you Eat?</h3>
+    <h3><%= @restaurant.name%> Pies:</h3>
     <% @pies.each do |pie| %>
       <p><%= link_to pie.name, py_path(pie.id) %></p>
     <% end %>
