@@ -10,6 +10,6 @@
   <p>Comments: </p>
 
   <% if logged_in? && current_user == @restaurant_rating.user %>
-    <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant_rating.user, @restaurant_rating)%>
+    <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id)%>
   <% end %>
 </div>

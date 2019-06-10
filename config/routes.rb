@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :pies
   resources :sauces, only: [:index]
   resources :toppings, only: [:index]
+  resources :restaurant_ratings, only: [:index]
 
   resources :restaurants, only: [:new, :index, :edit, :create, :show] do
     resources :restaurant_ratings, only: [:new, :create, :edit, :destroy, :show]
