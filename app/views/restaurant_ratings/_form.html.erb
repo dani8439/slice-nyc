@@ -1,0 +1,37 @@
+<%= form_for [@restaurant, @restaurant_rating] do |f| %>
+<% if @restaurant_rating.errors.any? %>
+  <div id="error_explanation">
+    <h2>There were some errors:</h2>
+    <ul>
+      <% @restaurant_rating.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <div>
+    <%= f.label "How was the atmosphere?" %>
+    <%= f.select :atmosphere_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
+
+    <%= f.label "How was the service?" %>
+    <%= f.select :service_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
+
+    <%= f.label "How was the food?" %>
+    <%= f.select :food_score, [['★☆☆☆☆',1], ['★★☆☆☆',2], ['★★★☆☆',3], ['★★★★☆',4], ['★★★★★',5]] %><br><br>
+
+    <%= f.label "What would you say about the restaurant itself?" %>
+    <%= f.text_area :comments %>
+
+  </div>
+
+  <div>
+    <h3>What Pies did you Eat?</h3>
+    <% @pies.each do |pie| %>
+      <p><%= link_to pie.name, py_path(pie.id) %></p>
+    <% end %>
+
+
+  </div>
+  <%= f.submit "Submit", class: "button btn-regular" %>
+<% end %>
