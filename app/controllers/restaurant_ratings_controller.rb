@@ -21,14 +21,15 @@ class RestaurantRatingsController < ApplicationController
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
+    # @restaurant_rating = RestaurantRating.create(restaurant_rating_params)
     @restaurant_rating = @user.restaurant_ratings.build(restaurant_rating_params)
-    # @restaurant_rating = @restaurant.restaurant_ratings.build(restaurant_rating_params) # -- won't load user_id
-
+    # @restaurant_rating = @restaurant.restaurant_ratings.build(restaurant_rating_params)
 
     if @restaurant_rating.save
       redirect_to restaurant_restaurant_rating_path(@restaurant_rating)
       # (@restaurant, @restaurant_rating)??
     else
+      @pies = @restaurant.pies
       render :new
     end
   end
@@ -43,7 +44,7 @@ class RestaurantRatingsController < ApplicationController
   private
 
   def restaurant_rating_params
-    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :food_score, :service_score, :atmosphere_score, :comments)
+    params.require(:restaurant_rating).permit(:restaurant_id, :food_score, :service_score, :atmosphere_score, :comments)
   end
 
   def set_current_user
