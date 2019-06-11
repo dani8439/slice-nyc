@@ -4,13 +4,12 @@ class RestaurantRatingsController < ApplicationController
 
   def index
     @restaurant_ratings = RestaurantRating.where("user_id=?", current_user) #scope method requirement
-    # @restaurant_ratings = RestaurantRating.where("restaurant_id =?", params[:restaurant_id])
 
   end
 
   def show
     find_restaurant
-    @restaurant_rating = RestaurantRating.find_by(id: params[:id])
+    find_rating
   end
 
   def new
@@ -35,13 +34,13 @@ class RestaurantRatingsController < ApplicationController
 
   def edit
     find_restaurant
-    @restaurant_rating = RestaurantRating.find_by(id: params[:id])
+    find_rating
     @pies = @restaurant.pies
   end
 
   def update
     find_restaurant
-    @restaurant_rating = RestaurantRating.find_by(id: params[:id])
+    find_rating
 
     if @restaurant_rating.update(restaurant_rating_params)
       redirect_to restaurant_restaurant_rating_path(@restaurant, @restaurant_rating)
@@ -49,6 +48,14 @@ class RestaurantRatingsController < ApplicationController
       @pies = @restaurant.pies
       render :edit
     end
+  end
+
+  def destroy
+    @restaurant_rating = RestaurantRating.find_by(id: params[:id])
+
+    @restaurant_rating.destroy
+
+    redirect_to restaurant_path(@restaurant)
   end
 
 
@@ -64,5 +71,9 @@ class RestaurantRatingsController < ApplicationController
 
   def find_restaurant
     @restaurant = Restaurant.find(params[:restaurant_id])
+  end
+
+  def find_rating
+    @restaurant_rating = RestaurantRating.find_by(id: params[:id])
   end
 end

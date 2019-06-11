@@ -10,6 +10,7 @@
   <p>Comments: <%= @restaurant_rating.comments %></p>
 
   <% if logged_in? && current_user == @restaurant_rating.user %>
-    <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id)%>
+    <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id)%><br><br>
+    <%= link_to "Delete this Rating", restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id), method: :delete %>
   <% end %>
 </div>

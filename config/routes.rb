@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   resources :toppings, only: [:index]
   resources :restaurant_ratings, only: [:index]
 
-  resources :restaurants, only: [:new, :index, :edit, :create, :show] do
-    resources :restaurant_ratings, only: [:new, :create, :edit, :destroy, :show]
+  resources :restaurants, only: [:new, :index, :edit, :create, :show, :update] do
+    resources :restaurant_ratings, only: [:new, :create, :edit, :update, :destroy, :show]
   end
 
 
