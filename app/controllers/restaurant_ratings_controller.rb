@@ -53,9 +53,9 @@ class RestaurantRatingsController < ApplicationController
   def destroy
     @restaurant_rating = RestaurantRating.find_by(id: params[:id])
 
-    @restaurant_rating.destroy
+    @restaurant_rating.delete
 
-    redirect_to restaurant_path(@restaurant)
+    redirect_to restaurant_ratings_path 
   end
 
 

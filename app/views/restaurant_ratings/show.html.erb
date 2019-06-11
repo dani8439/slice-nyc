@@ -11,6 +11,6 @@
 
   <% if logged_in? && current_user == @restaurant_rating.user %>
     <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id)%><br><br>
-    <%= link_to "Delete this Rating", restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id), method: :delete %>
+    <%= link_to "Delete this Rating", restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id), method: :delete, data: { confirm: "Are you sure?" } %>
   <% end %>
 </div>
