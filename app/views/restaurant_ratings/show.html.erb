@@ -1,13 +1,13 @@
 <div class="center-align">
   <h1><%= @current_user.username.capitalize %>'s Review of <%= @restaurant.name %></h1>
 
-  <p>Food Rating: <%= @restaurant_rating.food_score %> Star</p>
+  <p>Food Rating: <%= @restaurant_rating.food_score %> Stars</p>
 
-  <p>Service Rating: <%= @restaurant_rating.service_score %> Star</p>
+  <p>Service Rating: <%= @restaurant_rating.service_score %> Stars</p>
 
-  <p>Atmosphere Rating: <%= @restaurant_rating.atmosphere_score %> Star</p>
+  <p>Atmosphere Rating: <%= @restaurant_rating.atmosphere_score %> Stars</p>
 
-  <p>Comments: </p>
+  <p>Comments: <%= @restaurant_rating.comments %></p>
 
   <% if logged_in? && current_user == @restaurant_rating.user %>
     <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id)%>
