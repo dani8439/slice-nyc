@@ -2,7 +2,6 @@ class User < ApplicationRecord
   has_many :restaurant_ratings
   has_many :restaurants, through: :restaurant_ratings
 
-
   has_secure_password
 
   validates :password, presence: true
@@ -16,7 +15,6 @@ class User < ApplicationRecord
       user.provider = auth_hash["provider"]
       user.uid = auth_hash["uid"]
       user.password = SecureRandom.hex
-
     end
   end
 end

@@ -3,6 +3,4 @@ class Cheese < ApplicationRecord
   has_many :pies, through: :pie_cheeses
 
 
-  validates :name, presence: true
-
 end

@@ -1,5 +1,5 @@
-# slice-nyc
-A ruby on rails app that helps track and rate your favorite Pizza places in the NYC area. Users can create restaurants and pies, and add them to the database for other users to access as well. Users can also rate and keep track of restaurants they have visited in order to keep a record of what they like, and do not for future reference. 
+# Slice-NYC
+A ruby on rails app that helps track and rate your favorite Pizza places in the NYC area. Users can create restaurants and pies, and add them to the database for other users to access as well. Users can also rate and keep track of restaurants they have visited in order to keep a record of what they like, and do not for future reference.
 
 ## Prerequisites:
 
