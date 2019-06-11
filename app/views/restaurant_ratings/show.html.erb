@@ -10,7 +10,8 @@
   <p>Comments: <%= @restaurant_rating.comments %></p>
 
   <% if logged_in? && current_user == @restaurant_rating.user %>
-    <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id)%><br><br>
-    <%= link_to "Delete this Rating", restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id), method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "Edit this Rating", edit_restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id), class: "button btn-regular"%><br><br>
+    <%= link_to "Delete this Rating", restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id), method: :delete, data: { confirm: "Are you sure?" }, class: "button btn-regular" %><br></br>
+    <%= link_to "Ratings Home", restaurant_ratings_path, class: "button btn-regular" %>
   <% end %>
 </div>
