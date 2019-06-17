@@ -32,11 +32,14 @@ What Pies did you eat? Rating of pie is under restaurant review.
 
 Reach goals:
 
-User can filter Restaurants by neighborhood and borough -- EXTRA REACH, not necessary to fulfill project requirements.
+User can filter Restaurants by neighborhood and borough -- EXTRA REACH, not necessary to fulfill project requirements. X
 
 
 To Do:
 Check that code is DRY.
 Limited logic in controllers.
-Check activerecord level scope (does it fulfill?)
-Check that other users can't access someone else's reviews. 
+Check activerecord level scope (does it fulfill?) X (Two scope methods, for borough, and for user_id.)
+Check that other users can't access someone else's reviews. X
+
+
+What about restaurants with more than one location? 
