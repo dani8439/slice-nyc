@@ -3,6 +3,20 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
+
+    if params[:borough] == "The Bronx"
+      @restaurants = Restaurant.where(borough: "The Bronx")
+    elsif params[:borough] == "Brooklyn"
+      @restaurants = Restaurant.where(borough: "Brooklyn")
+    elsif params[:borough] == "Manhattan"
+      @restaurants = Restaurant.where(borough: "Manhattan")
+    elsif params[:borough] == "Queens"
+      @restaurants = Restaurant.where(borough: "Queens")
+    elsif params[:borough] == "Staten Island"
+      @restaurants = Restaurant.where(borough: "Staten Island")
+    else params[:borough].blank?
+      @restaurants = Restaurant.all.sort_by(&:name)
+    end
   end
 
 
