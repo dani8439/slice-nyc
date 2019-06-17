@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :restaurant_categories
+  resources :restaurant_categories #refactor to not show these routes as they are not being used?? 
   resources :pie_restaurants
   resources :pie_toppings
   resources :pie_cheeses
