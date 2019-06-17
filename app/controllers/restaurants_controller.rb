@@ -5,15 +5,15 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
 
     if params[:borough] == "The Bronx"
-      @restaurants = Restaurant.where(borough: "The Bronx")
+      @restaurants = Restaurant.the_bronx
     elsif params[:borough] == "Brooklyn"
-      @restaurants = Restaurant.where(borough: "Brooklyn")
+      @restaurants = Restaurant.brooklyn
     elsif params[:borough] == "Manhattan"
-      @restaurants = Restaurant.where(borough: "Manhattan")
+      @restaurants = Restaurant.manhattan
     elsif params[:borough] == "Queens"
-      @restaurants = Restaurant.where(borough: "Queens")
+      @restaurants = Restaurant.queens
     elsif params[:borough] == "Staten Island"
-      @restaurants = Restaurant.where(borough: "Staten Island")
+      @restaurants = Restaurant.staten_island
     else params[:borough].blank?
       @restaurants = Restaurant.all.sort_by(&:name)
     end

@@ -17,7 +17,27 @@ class Restaurant < ApplicationRecord
 
   accepts_nested_attributes_for :pies
   accepts_nested_attributes_for :categories
+  
 
+  def self.brooklyn
+    where(borough: "Brooklyn")
+  end
+
+  def self.the_bronx
+    where(borough: "The Bronx")
+  end
+
+  def self.manhattan
+    where(borough: "Manhattan")
+  end
+
+  def self.queens
+    where(borough: "Queens")
+  end
+
+  def self.staten_island
+    where(borough: "Staten Island")
+  end
 
 
 end
