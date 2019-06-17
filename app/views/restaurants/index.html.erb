@@ -3,13 +3,24 @@
 
     <h3>Filter Restaurants:</h3>
     <%= form_tag("/restaurants", method: "get") do %>
-      <%= select_tag "borough", options_from_collection_for_select(Restaurant.all, "id", "borough"), include_blank: true %>
+      <%= select_tag "borough", options_for_select(["The Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]), include_blank: true %>
       <%= submit_tag "Filter" %>
     <% end %>
 
-    <% Restaurant.all.sort_by(&:name).each do |rest| %>
-      <p><%= link_to rest.name, restaurant_path(rest.id) %></p>
+    <% if params[:borough] == "The Bronx" %>
+      <% @restaurants = Restaurant.where(borough: "The Bronx") %>
+    <% elsif params[:borough] == "Brooklyn" %>
+      <% @restaurants = Restaurant.where(borough: "Brooklyn") %>
+    <% elsif params[:borough] == "Manhattan" %>
+      <% @restaurants = Restaurant.where(borough: "Manhattan") %>
+    <% elsif params[:borough] == "Queens" %>
+      <% @restaurants = Restaurant.where(borough: "Queens") %>
+    <% elsif params[:borough] == "Staten Island" %>
+      <% @restaurants = Restaurant.where(borough: "Staten Island") %>
+    <% else params[:borough].blank? %>
+      <% @restaurants = Restaurant.all.sort_by(&:name) %>
     <% end %>
+
     <br></br>
 
     <% if logged_in? %>

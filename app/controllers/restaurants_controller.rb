@@ -45,3 +45,9 @@ class RestaurantsController < ApplicationController
     params.require(:restaurant).permit(:name, :neighborhood, :borough, :seating, :oven, :multiple_locations, category_ids: [], pie_ids: [])
   end
 end
+
+
+
+# <% Restaurant.all.sort_by(&:name).each do |rest| %>
+#   <p><%= link_to rest.name, restaurant_path(rest.id) %></p>
+# <% end %>
