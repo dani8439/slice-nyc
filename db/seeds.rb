@@ -72,7 +72,8 @@ restaurant1 = Restaurant.create(name: "Adelina's", neighborhood: "Greenpoint", b
 restaurant2 = Restaurant.create(name: "Amore Pizzeria", neighborhood: "Flushing", borough: "Queens", seating: "tables available", category_ids: ["12", "16"]),
 restaurant3 = Restaurant.create(name: "Antika", neighborhood: "Astoria", borough: "Queens", seating: "tables available", category_ids: ["7", "10"], multiple_locations: "true"),
 # restaurant = Restaurant.create(name: "Antika", neighborhoos: "Washington Heights", borough: "Manhattan", seating: "tables available", category_ids: ["7", "10"], multiple_locations: "true"),
-restaurant4 = Restaurant.create(name: "Archie's Bar & Pizza", neighborhood: "Bushwick", borough: "Broolyn", seating: "bar", category_ids: ["8"])
+restaurant4 = Restaurant.create(name: "Archie's Bar & Pizza", neighborhood: "Bushwick", borough: "Brooklyn", seating: "bar", category_ids: ["8"]),
+# restaurant = Restaurant.create(name: "Artichoke Basille's Pizza", neighborhood: "East Village", borough: "Manhattan", seating: "", category_ids: ["10"], multiple_locations: "true"),
 restaurant5 = Restaurant.create(name: "Barboncino", neighborhood: "Crown Heights", borough: "Brooklyn", seating: "tables available", category_ids: ["10"], oven: "Wood fire"),
 restaurant6 = Restaurant.create(name: "Best Pizza", neighborhood: "Williamsburg", borough: "Brooklyn", seating: "Standing room only", category_ids: ["7", "12"]),
 restaurant7 = Restaurant.create(name: "Brother's Pizzeria", neighborhood: "Fresh Meadows", borough: "Queens", seating: "tables available", category_ids: ["7", "12", "16"]),
@@ -125,16 +126,16 @@ restaurant41 = Restaurant.create(name: "Rubirosa", neighborhood: "Nolita", borou
 restaurant42 = Restaurant.create(name: "Sal and Carmines", neighborhood: "Manhattan Valley", borough: "Manhattan", seating: "tables available", category_ids: ["12"] ),
 restaurant43 = Restaurant.create(name: "Santa Panza", neighborhood: "Bushwick", borough: "Brooklyn", seating: "tables available", category_ids: ["10"], oven: "Wood fire"),
 restaurant44 = Restaurant.create(name: "Speedy Romeo" , neighborhood: "Clinton Hill" , borough: "Brooklyn", seating: "tables available" , category_ids: ["10"], multiple_locations: "true" ),
-# restaurant44 = Restaurant.create(name: "Speedy Romeo" , neighborhood: "Clinton Hill" , borough: "Brooklyn", seating: "tables available" , category_ids: ["10"], multiple_locations: "true" ),
+# restaurant44 = Restaurant.create(name: "Speedy Romeo" , neighborhood: "Lower East Side" , borough: "Manhattan", seating: "tables available" , category_ids: ["10"], multiple_locations: "true" ),
 
 restaurant45 = Restaurant.create(name: "Sottocasa", neighborhood: "Harlem", borough: "Manhattan", seating: "tables available", category_ids: ["10"], multiple_locations: "true"),
-# restaurant45 = Restaurant.create(name: "Sottocasa", neighborhood: "Harlem", borough: "Manhattan", seating: "tables available", category_ids: ["10"], multiple_locations: "true"),
+# restaurant45 = Restaurant.create(name: "Sottocasa", neighborhood: "Boerum Hill", borough: "Brooklyn", seating: "tables available", category_ids: ["10"], multiple_locations: "true"),
 
 restaurant46 = Restaurant.create(name: "Totonno's" , neighborhood: "Coney Island" , borough: "Brooklyn", seating: "tables available", category_ids: ["13"]),
 restaurant47 = Restaurant.create(name: "Una Pizza Napoletana", neighborhood: "Lower East Side", borough: "Manhattan", seating: "tables available", category_ids: ["10"]),
 restaurant48 = Restaurant.create(name: "Upside Pizza", neighborhood: "Midtown West", borough: "Manhattan", seating: "tables available", category_ids: ["12", "16"], oven: "Gas"),
 restaurant49 = Restaurant.create(name: "Zero Otto Nove", neighborhood: "Belmont", borough: "Queens", seating: "tables available", category_ids: ["10"], multiple_locations: "true"),
-#restaurant49 = Restaurant.create(name: "Zero Otto Nove", neighborhood: "Belmont", borough: "Queens", seating: "tables available", category_ids: ["10"], multiple_locations: "true"),
+#restaurant49 = Restaurant.create(name: "Zero Otto Nove", neighborhood: "Flatiron", borough: "Manhattan", seating: "tables available", category_ids: ["10"], multiple_locations: "true"),
 
 
 
@@ -142,6 +143,8 @@ restaurant49 = Restaurant.create(name: "Zero Otto Nove", neighborhood: "Belmont"
 
 sauce1 = Sauce.create(name: "Bèchamel"),
 sauce2 = Sauce.create(name: "Buffalo Sauce"),
+# sauce = Sauce.create(name: "Crab Sauce"),
+# sauce = Sauce.create(name: "Cream Sauce"),
 sauce3 = Sauce.create(name: "Double sauce"),
 sauce4 = Sauce.create(name: "Fra diavolo"),
 sauce5 = Sauce.create(name: "Hollandaise drizzle"),
@@ -286,7 +289,7 @@ top124 = Topping.create(name: "White Anchovies"),
 top125 = Topping.create(name: "White Balsamic"),
 
 
-
+# pie = Pie.create(name: "Artichoke", category_id: "10", cheese_ids: ["19", "22"] sauce_id: "4", crust_id: "4", topping_ids: ["5", "112"], restaurant_ids: ["6"]), 
 pie1 = Pie.create(name: "Bandiera Square", category_id: "16", cheese_ids: ["11", "25"], sauce_id: "13", crust_id: "4", topping_ids: ["112", "46"], restaurant_ids: ["38"]),
 pie2 = Pie.create(name: "Burrata", category_id: "10", cheese_ids: ["3"], sauce_id: "7", crust_id: "4", topping_ids: ["25", "43", "104"], restaurant_ids: ["45"]),
 pie3 = Pie.create(name: "Cacio e Pepe", category_id: "14", cheese_ids: ["19", "22"], sauce_id: "13", crust_id: "1", topping_ids: ["16", "120"], restaurant_ids: ["1"]),
