@@ -4,7 +4,7 @@
     <h3>Filter Restaurants:</h3>
     <%= form_tag("/restaurants", method: "get") do %>
       <%= select_tag "borough", options_for_select(["The Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]), include_blank: true %>
-      <%= submit_tag "Filter" %>
+      <%= submit_tag "Filter", class: "button btn-regular" %>
     <% end %>
 
     <% if params[:borough] == "The Bronx" %>
@@ -21,6 +21,9 @@
       <% @restaurants = Restaurant.all.sort_by(&:name) %>
     <% end %>
 
+    <% @restaurants.each do |rest| %>
+      <p><%= link_to rest.name, restaurant_path(rest.id) %></p>
+    <% end %>
     <br></br>
 
     <% if logged_in? %>
