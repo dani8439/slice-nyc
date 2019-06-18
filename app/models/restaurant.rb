@@ -9,6 +9,7 @@ class Restaurant < ApplicationRecord
 
 
 
+
   validates :name, presence: true
   validates :neighborhood, presence: true
   validates :borough, presence: true
@@ -17,7 +18,7 @@ class Restaurant < ApplicationRecord
 
   accepts_nested_attributes_for :pies
   accepts_nested_attributes_for :categories
-  
+
 
   def self.brooklyn
     where(borough: "Brooklyn")
