@@ -29,9 +29,6 @@
 
   <div>
     <p>Restaurants (hold down CTRL to select more than one): <%= f.collection_select(:restaurant_ids, Restaurant.all.sort_by(&:name), :id, :name, {}, { multiple: true })%></p>
-
-
-    <p>Link to Restaurant/Review here?</p>
   </div>
 
   <%= f.submit "Submit", class: "button btn-regular" %>
