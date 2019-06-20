@@ -18,4 +18,8 @@ class Pie < ApplicationRecord
   accepts_nested_attributes_for :restaurants
 
 
+  # def find_pies
+  #   Self.joins(:crust).where(pies: { crust_id: crust })
+  #   # SELECT "pies".* FROM "pies" WHERE "pies"."crust_id" = ? LIMIT ?
+  # end
 end
