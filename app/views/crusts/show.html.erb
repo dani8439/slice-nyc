@@ -3,5 +3,8 @@
 
   <h2>Pies: </h2>
 
+  <% @crust.find_pies.each do |pie|%>
+    <p><%= link_to pie.name, py_path(pie.id) %></p>
+  <% end %>
 
 </div>
