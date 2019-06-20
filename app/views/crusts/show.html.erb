@@ -2,6 +2,13 @@
   <h1><%= @crust.name %> Crust </h1>
 
   <h2>Pies: </h2>
+  <% if @crust.pies.empty? %>
+    <p>Hmm. Looks like there's nothing in the database for <%= @crust.name %>.</p>
+    <% if logged_in? %>
+      <p>Want to add something?</p>
+        <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %>
+    <% end %>
+  <% end %>
 
   <% @crust.find_pies.each do |pie|%>
     <p><%= link_to pie.name, py_path(pie.id) %></p>
