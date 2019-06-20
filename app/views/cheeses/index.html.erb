@@ -2,6 +2,6 @@
   <h1>Cheeses:</h1>
 
   <% @cheeses.each do |cheese| %>
-    <p><%= cheese.name %></p>
+    <p><%= link_to cheese.name, cheese_path(cheese.id) %></p>
   <% end %>
 </div>

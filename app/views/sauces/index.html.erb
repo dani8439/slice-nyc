@@ -2,7 +2,7 @@
   <h1>Sauces:</h1>
 
   <% @sauces.each do |sauce| %>
-    <p><%= sauce.name %></p>
+    <p><%= link_to sauce.name, sauce_path(sauce.id) %></p>
   <% end %>
 
 </div>

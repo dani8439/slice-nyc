@@ -2,7 +2,7 @@
   <h1>Style Crusts:</h1>
 
   <% @crusts.each do |crust| %>
-    <p><%= crust.name %></p>
+    <p><%= link_to crust.name, crust_path(crust.id) %></p>
   <% end %>
 
 </div>

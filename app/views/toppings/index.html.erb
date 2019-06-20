@@ -2,7 +2,7 @@
   <h1>Toppings:</h1>
 
   <% @toppings.each do |top| %>
-    <p><%= top.name %></p>
+    <p><%= link_to top.name, topping_path(top.id) %></p>
   <% end %>
 
 </div>
