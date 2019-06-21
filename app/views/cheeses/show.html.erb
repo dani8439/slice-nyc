@@ -7,11 +7,11 @@
     <% if logged_in? %>
       <p>Want to add something?</p>
       <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %>
-    <% end %> 
+    <% end %>
   <% end %>
 
   <% @cheese.pies.each do |pie| %>
     <p><%= link_to pie.name, py_path(pie.id) %></p>
   <% end %>
-
+  
 </div>

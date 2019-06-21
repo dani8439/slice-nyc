@@ -1,3 +1,2 @@
 module CrustsHelper
-
 end

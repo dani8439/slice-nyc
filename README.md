@@ -15,8 +15,8 @@ You will need to have the following installed on your computer in order to use S
 1. For the repository and clone it.
 2. Run `bundle install` to install gems.
 3. Set up the database with `rake db:create` and `rake db:migrate`
-4. Seed the database with `rake db:seed`.
-5. The app uses the dotenv gem for environment variables. Create a `.env` file in the root of the app and add `FACEBOOK_KEY=your_key` and `FACEBOOK_SECRET=your_secret`. If you do not already have a Facebook developer account, you will need to do so in order to get these keys through Oauth on Facebook for developers.
+4. Seed the database with `rake db:seed`. (Do not skip this step, otherwise you won't have any data to work with for certain categories).
+5. The app uses the dotenv gem for environment variables. Create a `.env` file in the root of the app and add `FACEBOOK_KEY=your_key` and `FACEBOOK_SECRET=your_secret`. If you do not already have a Facebook developer account, you will need to do so in order to get these keys through Oauth on Facebook for developers, in order to log in through Facebook.
 6. Run `rails s` and navigate to `http://localhost:3000`.
 
 ## Notes:

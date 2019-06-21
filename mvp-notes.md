@@ -25,21 +25,20 @@ Restaurant Review:
 
 Then choose from an existing list of pizza's offered:
 
-What Pies did you eat? Rating of pie is under restaurant review.
+What Pies did you eat? Rating of pie is under restaurant review. - NO. User can review the pie under restaurant rating itself.
 
 - Plain Pie
 - Pepperoni Pie etc.
 
 Reach goals:
 
-User can filter Restaurants by neighborhood and borough -- EXTRA REACH, not necessary to fulfill project requirements. X
+User can filter Restaurants by neighborhood and borough -- EXTRA REACH, not necessary to fulfill project requirements. 
 
 
 To Do:
 Check that code is DRY.
 Limited logic in controllers.
 Check activerecord level scope (does it fulfill?) X (Two scope methods, for borough, and for user_id.)
-Check that other users can't access someone else's reviews. X
 
 
-What about restaurants with more than one location? 
+What about restaurants with more than one location?

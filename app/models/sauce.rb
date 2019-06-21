@@ -6,5 +6,4 @@ class Sauce < ApplicationRecord
     Pie.joins(:sauce).where(pies: { sauce_id: self.id })
     # SELECT "pies".* FROM 'pies' INNER JOIN "sauces" ON "sauce"."id" = "pies"."sauce_id" WHERE "pies"."sauce_id" = ? LIMIT ?
   end
-
 end

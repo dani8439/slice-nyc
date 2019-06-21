@@ -4,5 +4,5 @@
   <% @restaurant_ratings.each do |rest| %>
     <h2><%= link_to rest.restaurant.name, restaurant_restaurant_rating_path(rest.restaurant.id, rest.id) %></h2>
   <% end %>
-
+  
 </div>

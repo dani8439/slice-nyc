@@ -16,6 +16,4 @@ class Pie < ApplicationRecord
   accepts_nested_attributes_for :toppings
   accepts_nested_attributes_for :cheeses
   accepts_nested_attributes_for :restaurants
-
-
 end
