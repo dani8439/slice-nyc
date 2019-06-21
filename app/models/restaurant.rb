@@ -40,5 +40,8 @@ class Restaurant < ApplicationRecord
     where(borough: "Staten Island")
   end
 
+  def self.other
+    where.not(borough: "Brooklyn")
+  end
 
 end

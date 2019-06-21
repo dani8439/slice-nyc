@@ -3,7 +3,7 @@ class RestaurantRatingsController < ApplicationController
   before_action :set_current_user, only: [:new, :create]
 
   def index
-    @restaurant_ratings = RestaurantRating.where("user_id=?", current_user) #scope method requirement
+    @restaurant_ratings = RestaurantRating.where("user_id=?", current_user)
 
   end
 
@@ -55,7 +55,7 @@ class RestaurantRatingsController < ApplicationController
 
     @restaurant_rating.delete
 
-    redirect_to restaurant_ratings_path 
+    redirect_to restaurant_ratings_path
   end
 
 
