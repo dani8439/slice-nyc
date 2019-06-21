@@ -40,8 +40,8 @@ class Restaurant < ApplicationRecord
     where(borough: "Staten Island")
   end
 
-  def self.other
-    where.not(borough: "Brooklyn")
-  end
+  # def self.other
+  #   where.not(borough: "Brooklyn") How to chain together for where.not(borough: )... multiples? 
+  # end
 
 end

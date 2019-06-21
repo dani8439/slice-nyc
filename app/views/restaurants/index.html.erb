@@ -3,7 +3,7 @@
 
     <h3>Filter Restaurants by Borough:</h3>
     <%= form_tag("/restaurants", method: "get") do %>
-      <%= select_tag "borough", options_for_select(["The Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island", "Other"]), include_blank: true %>
+      <%= select_tag "borough", options_for_select(["The Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]), include_blank: true %>
       <%= submit_tag "Filter", class: "button btn-regular" %>
     <% end %>
 

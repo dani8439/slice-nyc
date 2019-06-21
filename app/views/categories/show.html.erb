@@ -1,6 +1,14 @@
 <div class="center-align">
   <h1><%= @category.name %> Pizza </h1>
 
+  <% if @category.restaurants.empty? %>
+    <p>Looks like we've got nothing in the database for <%= @category.name%> yet.</p>
+    <% if logged_in? %>
+      <p>Got something to add? </p>
+        <%= link_to "Add a new Restaurant", new_restaurant_path, class: "button btn-regular" %>
+    <% end %>
+  <% end %>
+
   <div class="category_content">
     <% @category.restaurants.each do |rest| %>
       <p><%= link_to rest.name, restaurant_path(rest.id) %> - <%= rest.neighborhood %>, <%= rest.borough %></p>
