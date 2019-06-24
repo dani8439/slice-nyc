@@ -18,7 +18,7 @@
     <%= f.label :neighborhood %><br>
     <%= f.text_field :neighborhood %><br>
 
-    <%= f.label :borough %><br>
+    <%= f.label :borough, "Borough Or State If Not Located Within The 5 Boroughs" %><br>
     <%= f.text_field :borough %><br>
 
     <%= f.label :seating %><br>
@@ -30,7 +30,7 @@
     <%= f.label :multiple_locations %> (check if yes):<br>
     <%= f.check_box(:multiple_locations, {}, checked_value = "true", unchecked_value = "false") %><br>
 
-    <%= f.label "Category (hold down CTRL to select more than one):" %>
+    <%= f.label :category, "Category (hold down CTRL to select more than one):" %>
     <%= f.collection_select(:category_ids, Category.all, :id, :name, {}, { multiple: true }) %><br>
   </div>
 
