@@ -3,7 +3,7 @@
 
   <h2>Pies: </h2>
   <% if @cheese.pies.empty? %>
-    <p>Hmm. Looks like there's nothing in the database for <%= @cheese.name %> Cheese.</p>
+    <p>Whew it's quiet in here for <%= @cheese.name %> Cheese.</p>
     <% if logged_in? %>
       <p>Want to add something?</p>
       <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %>
@@ -13,5 +13,5 @@
   <% @cheese.pies.each do |pie| %>
     <p><%= link_to pie.name, py_path(pie.id) %></p>
   <% end %>
-  
+
 </div>
