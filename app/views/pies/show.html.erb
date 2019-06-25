@@ -4,11 +4,11 @@
   <h3>Crust: <%= @pie.crust.name %></h3>
   <h3>Sauce: <%= @pie.sauce.name %></h3>
   <h3>Cheese: <% @pie.cheeses.each do |cheese| %></h3>
-    <p><%= cheese.name %></p>
+    <p><%= link_to cheese.name, cheese_path(cheese.id) %></p>
   <% end %>
 
   <h3>Toppings: <% @pie.toppings.each do |topping| %></h3>
-    <p><%= topping.name %></p>
+    <p><%= link_to topping.name, topping_path(topping.id) %></p>
   <% end %>
 
   <h2>Available at: </h2>
