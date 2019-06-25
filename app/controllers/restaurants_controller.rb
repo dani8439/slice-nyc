@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
     elsif params[:borough] == "Staten Island"
       @restaurants = Restaurant.staten_island
     elsif params[:borough] == "Other"
-      @restaurants = Restaurant.other 
+      @restaurants = Restaurant.other
     else params[:borough].blank?
       @restaurants = Restaurant.all.sort_by(&:name)
     end
@@ -53,6 +53,7 @@ class RestaurantsController < ApplicationController
       render :edit
     end
   end
+
 
   private
 

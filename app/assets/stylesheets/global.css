@@ -81,22 +81,17 @@ footer {
 .btn-regular {
   font-family: 'Crimson Text', serif;
   font-size: 1em;
+  background-color: #41BC6E;
+  color: white;
 }
 
 .btn-regular:hover {
   font-family: 'Crimson Text', serif;
-  background-color: #41BC6E;
+  background-color: #CE0A1D;
   color: white;
   font-size: 1em;
 }
 
-.btn-add {
-
-}
-
-.btn-add:hover {
-
-}
 
 /* alerts */
 .alert {
