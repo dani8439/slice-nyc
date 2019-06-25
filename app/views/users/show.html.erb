@@ -1,5 +1,5 @@
 <div class="center-align">
-  <h2>Let's get eating <%= @user.username.capitalize %>. Where would you like to start?</h2>
+  <h2>Let's get eating <%= @user.username.split.map(&:capitalize).join(' ') %>. Where would you like to start?</h2>
 
     <h3><%= link_to "By Category", categories_path %></h3>
     <h3><%= link_to "By Restaurants", restaurants_path %></h3>
