@@ -2,7 +2,7 @@
   <h1><%= @category.name %> Pizza </h1>
 
   <% if @category.restaurants.empty? %>
-    <p>Looks like we've got nothing in the database for <%= @category.name%> yet.</p>
+    <p>Looks like we've got nothing in the database for <%= @category.name%> Pizza yet.</p>
     <% if logged_in? %>
       <p>Got something to add? </p>
         <%= link_to "Add a new Restaurant", new_restaurant_path, class: "button btn-regular" %>
