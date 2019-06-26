@@ -5,6 +5,11 @@ class CrustsController < ApplicationController
     @crusts = Crust.all
   end
 
+  def new
+    flash[:alert] = "You don't have access to that feature."
+    redirect_to crusts_path
+  end
+
   def show
     @crust = Crust.find_by(id: params[:id])
   end

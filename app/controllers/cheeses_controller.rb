@@ -5,6 +5,11 @@ class CheesesController < ApplicationController
     @cheeses = Cheese.all
   end
 
+  def new
+    flash[:alert] = "You do not have access to that feature."
+    redirect_to cheeses_path
+  end
+
   def show
     @cheese = Cheese.find_by(id: params[:id])
   end
