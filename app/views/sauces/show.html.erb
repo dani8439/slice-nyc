@@ -3,10 +3,10 @@
 
 
   <% if @sauce.pies.empty? %>
-    <p>We got nothing for <%= @sauce.name %>.</p>
+    <p>Whoa there <%= @sauce.name %>, looks like you're pretty lonely.</p>
     <% if logged_in? %>
       <p>Want to add something?</p>
-        <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %>
+        <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %> <br></br>
     <% end %>
   <% end %>
 
@@ -14,4 +14,5 @@
     <p><%= link_to pie.name, py_path(pie.id)%></p>
   <% end %>
 
+    <%= link_to "Sauce Home", sauces_path, class: "button btn-regular"%>
 </div>

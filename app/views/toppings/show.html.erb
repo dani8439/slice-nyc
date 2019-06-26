@@ -6,12 +6,14 @@
     <p>Hmm. Looks like there's nothing in the database for <%= @topping.name %></p>
     <% if logged_in? %>
       <p>Want to add something?</p>
-      <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %>
+      <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %><br></br>
     <% end %>
   <% end %>
 
   <% @topping.pies.each do |pie| %>
     <p><%= link_to pie.name, py_path(pie.id) %> </p>
   <% end %>
+
+  <%= link_to "Toppings Home", toppings_path, class: "button btn-regular"%> 
 
 </div>

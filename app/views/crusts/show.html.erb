@@ -3,15 +3,17 @@
 
   <h2>Pies: </h2>
   <% if @crust.pies.empty? %>
-    <p>Hmm. Looks like there's nothing in the database for <%= @crust.name %>.</p>
+    <p>Hot Damn! We got nothing for <%= @crust.name %> crust.</p>
     <% if logged_in? %>
       <p>Want to add something?</p>
-        <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %>
+        <%= link_to "Create a new Pie", new_py_path, class: "button btn-regular" %><br></br>
     <% end %>
   <% end %>
 
   <% @crust.pies.each do |pie| %>
     <p><%= link_to pie.name, py_path(pie.id)%></p>
   <% end %>
+
+    <%= link_to "Crust Home", crusts_path, class: "button btn-regular"%>
 
 </div>
