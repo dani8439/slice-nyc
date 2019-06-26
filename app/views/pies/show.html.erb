@@ -1,8 +1,8 @@
 <div class="center-align">
   <h1><%= @pie.name %> Pie</h1>
-  <h3>Style: <%= @pie.category.name %></h3>
-  <h3>Crust: <%= @pie.crust.name %></h3>
-  <h3>Sauce: <%= @pie.sauce.name %></h3>
+  <h3>Style: <%= link_to @pie.category.name, category_path(@category.id) %></h3>
+  <h3>Crust: <%= link_to @pie.crust.name, crust_path(@crust.id) %></h3>
+  <h3>Sauce: <%= link_to @pie.sauce.name, sauce_path(@sauce.id) %></h3>
   <h3>Cheese: <% @pie.cheeses.each do |cheese| %></h3>
     <p><%= link_to cheese.name, cheese_path(cheese.id) %></p>
   <% end %>

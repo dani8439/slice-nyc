@@ -7,10 +7,6 @@ class PiesController < ApplicationController
 
   def new
     @pie = Pie.new
-    @category = Category.all
-    @cheese = Cheese.all
-    @sauce = Sauce.all
-    @toppings = Topping.all
   end
 
 
@@ -19,7 +15,6 @@ class PiesController < ApplicationController
     @pie = Pie.new(pie_params)
 
     if @pie.save
-      # raise @pie.inspect
       redirect_to @pie
     else
       render :new
@@ -28,6 +23,9 @@ class PiesController < ApplicationController
 
   def show
     @pie = Pie.find_by(id: params[:id])
+    @category = @pie.category
+    @crust = @pie.crust
+    @sauce = @pie.sauce
   end
 
   def edit
