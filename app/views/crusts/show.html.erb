@@ -10,7 +10,7 @@
     <% end %>
   <% end %>
 
-  <% @crust.pies.each do |pie| %>
+  <% @crust.pies.sort_by(&:name).each do |pie| %>
     <p><%= link_to pie.name, py_path(pie.id)%></p>
   <% end %>
 

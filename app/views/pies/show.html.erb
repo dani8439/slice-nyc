@@ -13,7 +13,7 @@
 
   <h2>Available at: </h2>
 
-  <% @pie.restaurants.each do |restaurant| %>
+  <% @pie.restaurants.sort_by(&:name).each do |restaurant| %>
     <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
   <% end %>
 

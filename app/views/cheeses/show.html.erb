@@ -10,7 +10,7 @@
     <% end %>
   <% end %>
 
-  <% @cheese.pies.each do |pie| %>
+  <% @cheese.pies.sorted.each do |pie| %>
     <p><%= link_to pie.name, py_path(pie.id) %></p>
   <% end %>
 

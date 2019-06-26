@@ -19,7 +19,7 @@
   <p>Seating: <%= @restaurant.seating.capitalize %>.</p>
 
   <h2>Pies Available:</h2>
-  <% @restaurant.pies.each do |pie| %>
+  <% @restaurant.pies.sort_by(&:name).each do |pie| %>
     <p><%= link_to pie.name, py_path(pie.id) %></p>
   <% end %>
 
