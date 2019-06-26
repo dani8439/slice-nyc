@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
 
-  resources :restaurant_categories, only: [:index]
-  resources :pie_restaurants, only: [:index]
-  resources :pie_toppings, only: [:index]
-  resources :pie_cheeses, only: [:index]
+  resources :restaurant_categories, only: [:index] #? Are these necessary?
+  resources :pie_restaurants, only: [:index] #?
+  resources :pie_toppings, only: [:index] #?
+  resources :pie_cheeses, only: [:index] #?
   resources :categories, only: [:index, :new, :show]
   resources :cheeses, only: [:index, :new, :show]
   resources :crusts, only: [:index, :new, :show]
