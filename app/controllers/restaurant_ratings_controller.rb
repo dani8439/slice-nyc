@@ -10,6 +10,7 @@ class RestaurantRatingsController < ApplicationController
   def show
     find_restaurant
     find_rating
+    redirect_if_not_current_user
   end
 
   def new
@@ -36,6 +37,7 @@ class RestaurantRatingsController < ApplicationController
     find_restaurant
     find_rating
     @pies = @restaurant.pies
+    redirect_if_not_current_user
   end
 
   def update
@@ -62,7 +64,7 @@ class RestaurantRatingsController < ApplicationController
   private
 
   def restaurant_rating_params
-    params.require(:restaurant_rating).permit(:restaurant_id, :food_score, :service_score, :atmosphere_score, :comments)
+    params.require(:restaurant_rating).permit(:user_id, :restaurant_id, :food_score, :service_score, :atmosphere_score, :comments)
   end
 
   def set_current_user
@@ -75,5 +77,13 @@ class RestaurantRatingsController < ApplicationController
 
   def find_rating
     @restaurant_rating = RestaurantRating.find_by(id: params[:id])
+
+  end
+
+  def redirect_if_not_current_user
+    if @restaurant_rating.user_id != current_user.id
+      flash[:error_alert] = "You do not have access to that rating."
+      redirect_to restaurant_ratings_path
+    end
   end
 end

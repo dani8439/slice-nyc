@@ -1,5 +1,5 @@
 <div class="center-align">
-  <h1><%= @current_user.username.capitalize %>'s Review of <%= @restaurant.name %></h1>
+  <h1><%= @current_user.username.split.map(&:capitalize).join(' ') %>'s Review of <%= @restaurant.name %></h1>
 
   <p>Food Rating: <%= @restaurant_rating.food_score %> Stars</p>
 
@@ -14,5 +14,5 @@
     <%= link_to "Delete this Rating", restaurant_restaurant_rating_path(@restaurant, @restaurant_rating.id), method: :delete, data: { confirm: "Are you sure?" }, class: "button btn-regular" %><br></br>
     <%= link_to "Ratings Home", restaurant_ratings_path, class: "button btn-regular" %>
   <% end %>
-  
+
 </div>
