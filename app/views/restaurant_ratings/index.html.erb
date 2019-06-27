@@ -3,8 +3,10 @@
 
   <% @restaurant_ratings.each do |rest| %>
     <h2><%= link_to rest.restaurant.name, restaurant_restaurant_rating_path(rest.restaurant.id, rest.id) %></h2>
+    <p>Food: <%= rest.food_score %> Stars, Atmosphere: <%= rest.atmosphere_score%> Stars, Service: <%= rest.service_score %> Stars</p>
+    <p>Comments: <%= rest.comments %></p>
   <% end %>
 
-  <%= link_to "Restaurants Home", restaurants_path, class: "button btn-regular" %> 
+  <%= link_to "Restaurants Home", restaurants_path, class: "button btn-regular" %>
 
 </div>
