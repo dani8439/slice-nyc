@@ -2,18 +2,11 @@ class RestaurantsController < ApplicationController
   before_action :require_login, except: [:index, :show]
 
   def index
-    @restaurants = Restaurant.all
+    # @restaurants = Restaurant.all
 
-    if params[:borough] == "The Bronx"
-      @restaurants = Restaurant.the_bronx
-    elsif params[:borough] == "Brooklyn"
-      @restaurants = Restaurant.brooklyn
-    elsif params[:borough] == "Manhattan"
-      @restaurants = Restaurant.manhattan
-    elsif params[:borough] == "Queens"
-      @restaurants = Restaurant.queens
-    elsif params[:borough] == "Staten Island"
-      @restaurants = Restaurant.staten_island
+
+    if params[:borough] != "Other" && !params[:borough].blank?
+      @restaurants = Restaurant.borough_filter(params[:borough])
     elsif params[:borough] == "Other"
       @restaurants = Restaurant.other
     else params[:borough].blank?

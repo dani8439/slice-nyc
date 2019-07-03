@@ -18,25 +18,10 @@ class Restaurant < ApplicationRecord
   accepts_nested_attributes_for :categories
 
 
-  def self.brooklyn
-    where(borough: "Brooklyn")
+  def self.borough_filter(b)
+    where("borough=?", b)
   end
 
-  def self.the_bronx
-    where(borough: "The Bronx")
-  end
-
-  def self.manhattan
-    where(borough: "Manhattan")
-  end
-
-  def self.queens
-    where(borough: "Queens")
-  end
-
-  def self.staten_island
-    where(borough: "Staten Island")
-  end
 
   def self.other
     where.not(borough: ["Brooklyn", "The Bronx", "Manhattan", "Queens", "Staten Island"])

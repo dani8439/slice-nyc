@@ -3,7 +3,7 @@ class RestaurantRatingsController < ApplicationController
   before_action :set_current_user, only: [:new, :create]
 
   def index
-    @restaurant_ratings = RestaurantRating.where("user_id=?", current_user)
+    @restaurant_ratings = current_user.restaurant_ratings
 
   end
 
