@@ -26,4 +26,5 @@ class Restaurant < ApplicationRecord
   def self.other
     where.not(borough: ["Brooklyn", "The Bronx", "Manhattan", "Queens", "Staten Island"])
   end
+
 end

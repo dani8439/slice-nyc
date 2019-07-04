@@ -11,6 +11,8 @@ class RestaurantRatingsController < ApplicationController
     find_restaurant
     find_rating
     redirect_if_not_current_user
+    # @ratings = @restaurant.restaurant_ratings.others
+    @ratings = @restaurant.restaurant_ratings.where.not("user_id=?", current_user)
   end
 
   def new
@@ -87,3 +89,15 @@ class RestaurantRatingsController < ApplicationController
     end
   end
 end
+
+# For Index page to show other users, but need scope to knock out current_user.id
+# <% if !@restaurant.restaurant_ratings.empty?%>
+#   <h3>What other's are saying about <%= @restaurant.name %>:</h3>
+#   <% @restaurant.restaurant_ratings.each do |r| %>
+#     <h4><%= r.user.username %> says: </h4>
+#     <p>Food Score: <%= r.food_score %> Stars</p>
+#     <p>Service Rating: <%= r.service_score %> Stars</p>
+#     <p>Atmosphere Rating: <%= r.atmosphere_score %> Stars</p>
+#     <p><%= r.comments %></p>
+#   <% end %>
+# <% end %>

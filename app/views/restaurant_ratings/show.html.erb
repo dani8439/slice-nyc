@@ -15,4 +15,16 @@
     <%= link_to "Ratings Home", restaurant_ratings_path, class: "button btn-regular" %>
   <% end %>
 
+
+   <% if !@restaurant.restaurant_ratings.empty? %>
+     <h3>What other's are saying about <%= @restaurant.name %>:</h3>
+     <% @ratings.each do |r| %>
+       <h4><%= r.user.username %> says: </h4>
+       <p>Food Score: <%= r.food_score %> Stars</p>
+       <p>Service Rating: <%= r.service_score %> Stars</p>
+       <p>Atmosphere Rating: <%= r.atmosphere_score %> Stars</p>
+       <p><%= r.comments %></p>
+     <% end %>
+   <% end %>
+
 </div>
