@@ -16,7 +16,7 @@
   <% end %>
 
 
-   <% if !@restaurant.restaurant_ratings.empty? %>
+   <% if !@ratings.empty? %>
      <h3>What other's are saying about <%= @restaurant.name %>:</h3>
      <% @ratings.each do |r| %>
        <h4><%= r.user.username %> says: </h4>
