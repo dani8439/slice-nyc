@@ -7,7 +7,7 @@ class RestaurantRating < ApplicationRecord
   validates :food_score, presence: true
 
 
-  # def self.others
-  #   where.not("user_id=?", current_user)
-  # end
+  def self.others
+    where.not("user_id=?", current_user) #can't access current_user outside of controller, as no session[:id]
+  end
 end
