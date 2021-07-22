@@ -14,8 +14,6 @@ User can rate restaurant & add pies to restaurant review that they've eaten. NO 
 
 User can then filter what restaurants they have rated, and see those ratings.
 
-
-
 Ex:
 Restaurant Review:
 
@@ -32,13 +30,13 @@ What Pies did you eat? Rating of pie is under restaurant review. - NO. User can 
 
 Reach goals:
 
-User can filter Restaurants by neighborhood and borough -- EXTRA REACH, not necessary to fulfill project requirements. 
-
+User can filter Restaurants by neighborhood and borough -- EXTRA REACH, not necessary to fulfill project requirements.
 
 To Do:
 Check that code is DRY.
 Limited logic in controllers.
 Check activerecord level scope (does it fulfill?) X (Two scope methods, for borough, and for user_id.)
 
-
 What about restaurants with more than one location?
+
+// issue on 7.22.2021 With OAUTH and Facebook login?
