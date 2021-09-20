@@ -12,7 +12,7 @@ You will need to have the following installed on your computer in order to use S
 
 ## Set up:
 
-1. For the repository and clone it.
+1. Fork the repository and clone it.
 2. Run `bundle install` to install gems.
 3. Set up the database with `rake db:create` and `rake db:migrate`
 4. Seed the database with `rake db:seed`. (Do not skip this step, otherwise you won't have any data to work with for certain categories).
