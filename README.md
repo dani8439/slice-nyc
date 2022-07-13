@@ -9,6 +9,11 @@ You will need to have the following installed on your computer in order to use S
 - Rails 5+
 - PostgreSQL database
 
+## Live Demo: 
+
+Slice-NYC is hosted on Heroku. If you would like to interact with a live version of this site, and have a look around, please click [here](https://slice-nyc.herokuapp.com/). 
+
+<img width="1437" alt="Screen Shot 2022-07-13 at 3 45 56 PM" src="https://user-images.githubusercontent.com/26771302/178826178-d3e38a6a-ac30-468a-8c1b-eeb75fd86dd6.png">
 
 ## Set up:
 
@@ -18,6 +23,8 @@ You will need to have the following installed on your computer in order to use S
 4. Seed the database with `rake db:seed`. (Do not skip this step, otherwise you won't have any data to work with for certain categories).
 5. The app uses the dotenv gem for environment variables. Create a `.env` file in the root of the app and add `FACEBOOK_KEY=your_key` and `FACEBOOK_SECRET=your_secret`. If you do not already have a Facebook developer account, you will need to do so in order to get these keys through Oauth on Facebook for developers, in order to log in through Facebook.
 6. Run `rails s` and navigate to `http://localhost:3000`.
+
+<img width="1435" alt="Screen Shot 2022-07-13 at 3 46 34 PM" src="https://user-images.githubusercontent.com/26771302/178826221-9afae29a-ce33-417b-98b4-4f54048d45ef.png">
 
 ## Notes:
 
