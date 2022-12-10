@@ -7,11 +7,7 @@ You will need to have the following installed on your computer in order to use S
 
 - Ruby
 - Rails 5+
-- PostgreSQL database
-
-## Live Demo: 
-
-Slice-NYC is hosted on Heroku. If you would like to interact with a live version of this site, and have a look around, please click [here](https://slice-nyc.herokuapp.com/). 
+- PostgreSQL database 
 
 <img width="1437" alt="Screen Shot 2022-07-13 at 3 45 56 PM" src="https://user-images.githubusercontent.com/26771302/178826178-d3e38a6a-ac30-468a-8c1b-eeb75fd86dd6.png">
 
